@@ -27,7 +27,7 @@ export const CuratedSection = () => (
 const style = {
   root: css`
     width: 100%;
-    max-width: 1200px;
+    max-width: 1392px;
     margin: 100px auto;
   `,
 }

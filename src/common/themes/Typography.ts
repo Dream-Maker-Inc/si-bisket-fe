@@ -4,19 +4,25 @@ import { TypographyOptions } from '@mui/material/styles/createTypography'
 const baseTypographyOptions: TypographyOptions = {
   fontFamily: 'Exo 2',
   h1: {
-    fontSize: 60,
+    fontSize: 66,
   },
   h2: {
     fontSize: 50,
   },
   h3: {
-    fontSize: 40,
+    fontSize: 36,
   },
   h4: {
-    fontSize: 30,
+    fontSize: 32,
+  },
+  subtitle1: {
+    fontSize: 18,
+  },
+  subtitle2: {
+    fontSize: 16,
   },
   caption: {
-    lineHeight: 1.4,
+    fontSize: 14,
   },
 }
 

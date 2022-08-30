@@ -9,7 +9,7 @@ export enum Colors {
 
   Border = '#eee',
 
-  MainContentBg = '#eee',
+  MainContentBg = '#fff',
   AppbarBg = '#2f2f37',
 }
 

@@ -1,47 +1,37 @@
-import { Button, Chip, Stack, Typography } from '@mui/material'
-import { PersonRounded } from '@mui/icons-material'
+import { Button, Stack, Typography } from '@mui/material'
 import { css } from '@emotion/react'
+import { ProfileChip } from '@/common/components/ProfileChip'
 
 const CaptionContainer = () => (
   <Stack direction='row' mt={5}>
     <Stack>
-      <Typography variant='caption' mb={1} fontWeight='bold'>
+      <Typography variant='subtitle2' mb={1.5} fontWeight='bold'>
         Created by
       </Typography>
-      <Chip
-        icon={<PersonRounded />}
-        label='@ARTISTDA'
-        variant='filled'
-        css={style.chip}
-      ></Chip>
+      <ProfileChip image='/main/profile.png' text='@ARTISTDA' />
     </Stack>
     <Stack ml={5}>
-      <Typography variant='caption' mb={1} fontWeight='bold'>
+      <Typography variant='subtitle2' mb={1.5} fontWeight='bold'>
         Collection
       </Typography>
-      <Chip
-        icon={<PersonRounded />}
-        label='COLLECTION NAME'
-        variant='filled'
-        css={style.chip}
-      ></Chip>
+      <ProfileChip image='/main/profile.png' text='COLLECTION NAME' />
     </Stack>
   </Stack>
 )
 
 const BuyContainer = () => (
-  <Stack mt={5}>
-    <Typography variant='caption' fontWeight='bold'>
+  <Stack mt={4}>
+    <Typography variant='subtitle2' fontWeight='bold'>
       Buy Now
     </Typography>
-    <Typography variant='h3' fontWeight='bold'>
+    <Typography variant='h3' fontWeight='bold' mt={0.75}>
       1,000,000 WON
     </Typography>
   </Stack>
 )
 
 export const CollectionInformation = () => (
-  <Stack justifyContent='center' ml={5}>
+  <Stack justifyContent='center' ml={11.5}>
     <Typography variant='h1' fontWeight='bold'>
       The Fall Of An Angelthe Fall Of An Angel
     </Typography>
@@ -50,19 +40,24 @@ export const CollectionInformation = () => (
     <BuyContainer />
 
     <Button variant='contained' color='primary' css={style.button}>
-      View NFT
+      View Nft
     </Button>
   </Stack>
 )
 
 const style = {
-  chip: css`
-    background-color: white;
-  `,
   button: css`
-    width: 400px;
-    height: 46px;
-    margin-top: 20px;
-    border-radius: 8px;
+    width: fit-content;
+    min-width: 414px;
+    height: 60px;
+    margin-top: 32px;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 0.2s;
+
+    &:hover {
+      transform: translateY(-3%);
+      transition: 0.2s;
+    }
   `,
 }
