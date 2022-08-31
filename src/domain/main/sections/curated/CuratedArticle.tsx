@@ -36,7 +36,7 @@ const style = {
   `,
   image: css`
     position: absolute;
-    filter: brightness(30%);
+    filter: brightness(50%);
 
     @media (${MediaQueries.xxl}) {
       width: 1076px;

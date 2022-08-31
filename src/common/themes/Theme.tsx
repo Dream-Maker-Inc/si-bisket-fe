@@ -17,10 +17,10 @@ export const theme = createTheme({
   // 반응형 처리 포인트
   breakpoints: {
     values: {
-      xs: 0,
-      sm: BreakPoints.sm + 1,
+      xs: BreakPoints.xs + 1,
+      sm: 0,
       md: BreakPoints.md + 1,
-      lg: BreakPoints.lg + 1,
+      lg: 0,
       xl: BreakPoints.xl + 1,
     },
   },

@@ -5,7 +5,7 @@ import { MediaQueries } from '@/common/themes/Limit'
 import { getTypoSizePx } from '@/common/themes/Typography'
 
 const CaptionContainer = () => (
-  <Stack direction='row' mt={5}>
+  <Stack css={style.captionRoot}>
     <Stack>
       <Typography variant='subtitle2' mb={1.5} fontWeight='bold'>
         Created by
@@ -22,7 +22,7 @@ const CaptionContainer = () => (
 )
 
 const BuyContainer = () => (
-  <Stack mt={4}>
+  <Stack css={style.buyRoot}>
     <Typography variant='subtitle2' fontWeight='bold'>
       Buy Now
     </Typography>
@@ -33,7 +33,7 @@ const BuyContainer = () => (
 )
 
 export const CollectionInformation = () => (
-  <Stack justifyContent='center' ml={11.5}>
+  <Stack css={style.root}>
     <Typography variant='h1' fontWeight='bold' css={style.title}>
       The Fall Of An Angelthe Fall Of An Angel
     </Typography>
@@ -48,9 +48,37 @@ export const CollectionInformation = () => (
 )
 
 const style = {
+  root: css`
+    justify-content: center;
+    margin-left: 92px;
+
+    @media (${MediaQueries.xl}) {
+      margin-left: 0;
+    }
+  `,
+  captionRoot: css`
+    flex-direction: row;
+    margin-top: 40px;
+
+    @media (${MediaQueries.xl}) {
+      margin-top: 20px;
+    }
+  `,
+  buyRoot: css`
+    margin-top: 32px;
+
+    @media (${MediaQueries.xl}) {
+      margin-top: 22px;
+    }
+  `,
   title: css`
     @media (${MediaQueries.xxl}) {
       font-size: ${getTypoSizePx('h2')};
+    }
+
+    @media (${MediaQueries.xl}) {
+      margin-top: 31px;
+      font-size: 44px;
     }
   `,
   button: css`
@@ -65,6 +93,11 @@ const style = {
     &:hover {
       transform: translateY(-3%);
       transition: 0.2s;
+    }
+
+    @media (${MediaQueries.xl}) {
+      width: 100%;
+      margin-top: 16px;
     }
   `,
 }

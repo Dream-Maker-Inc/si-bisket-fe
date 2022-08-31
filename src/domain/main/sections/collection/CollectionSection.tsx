@@ -20,6 +20,11 @@ const style = {
     @media (${MediaQueries.xxl}) {
       max-width: 1076px;
     }
+
+    @media (${MediaQueries.xl}) {
+      flex-direction: column;
+      align-items: center;
+    }
   `,
   image: css`
     max-width: 650px;
@@ -28,6 +33,10 @@ const style = {
 
     @media (${MediaQueries.xxl}) {
       max-width: 450px;
+    }
+
+    @media (${MediaQueries.xl}) {
+      max-width: 445px;
     }
   `,
 }
