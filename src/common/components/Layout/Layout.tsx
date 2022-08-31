@@ -11,7 +11,7 @@ export interface LayoutProps {
 export const Layout = ({ children }: LayoutProps) => {
   return (
     <Stack width='100%' height='100%'>
-      <CustomAppbar>Appbar</CustomAppbar>
+      <CustomAppbar />
 
       <Stack direction='row' width='100%' height='100%'>
         <main css={st.main}>{children}</main>

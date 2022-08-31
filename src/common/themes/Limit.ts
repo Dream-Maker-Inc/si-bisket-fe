@@ -2,11 +2,11 @@
 export const BreakPoints = {
   xs: 376,
   sm: 576,
-  md: 768, // Mobile
+  md: 679, // Mobile
   lg: 900,
-  xl: 1200, // Tablet
-  xxl: 1440, // Laptop
-};
+  xl: 1025, // Tablet
+  xxl: 1369, // Laptop
+}
 
 // 미디어 쿼리
 export const MediaQueries = {
@@ -16,4 +16,4 @@ export const MediaQueries = {
   lg: `(max-width:${BreakPoints.lg}px)`,
   xl: `(max-width:${BreakPoints.xl}px)`,
   xxl: `(max-width:${BreakPoints.xxl}px)`,
-};
+}
