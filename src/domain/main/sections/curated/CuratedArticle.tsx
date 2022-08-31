@@ -4,6 +4,7 @@ import {
   CardContainer,
   TitleContainer,
 } from '@/domain/main/sections/curated/card'
+import { MediaQueries } from '@/common/themes/Limit'
 
 export const CuratedArticle = () => (
   <article css={style.root}>
@@ -28,15 +29,29 @@ const style = {
     margin-bottom: 24px;
     overflow: hidden;
     border-radius: 20px;
+
+    @media (${MediaQueries.xxl}) {
+      height: 616px;
+    }
   `,
   image: css`
     position: absolute;
-    filter: brightness(30%) blur(20px);
+    filter: brightness(30%);
+
+    @media (${MediaQueries.xxl}) {
+      width: 1076px;
+      height: 616px;
+    }
   `,
   container: css`
     position: absolute;
     margin-bottom: 24px;
     flex-direction: row;
     border-radius: 20px;
+
+    @media (${MediaQueries.xxl}) {
+      width: 100%;
+      flex-direction: column;
+    }
   `,
 }

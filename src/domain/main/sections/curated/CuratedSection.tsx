@@ -2,6 +2,7 @@ import { css } from '@emotion/react'
 import { Typography } from '@mui/material'
 import { CuratedArticle } from '@/domain/main/sections/curated/CuratedArticle'
 import { EnrollBanner } from '@/domain/main/sections/curated/EnrollBanner'
+import { MediaQueries } from '@/common/themes/Limit'
 
 export const CuratedSection = () => (
   <section>
@@ -29,5 +30,9 @@ const style = {
     width: 100%;
     max-width: 1392px;
     margin: 100px auto;
+
+    @media (${MediaQueries.xxl}) {
+      max-width: 1076px;
+    }
   `,
 }

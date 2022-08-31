@@ -4,7 +4,7 @@ import { css } from '@emotion/react'
 export const EnrollBanner = () => (
   <Stack css={style.root}>
     <Stack css={style.videoWrapper}>
-      <video autoPlay loop css={style.video}>
+      <video autoPlay muted loop css={style.video}>
         <source src='/main/video.mp4' />
       </video>
       <div css={style.topLine} />

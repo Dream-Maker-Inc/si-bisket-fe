@@ -27,7 +27,6 @@ export const CardItem = () => (
 const style = {
   card: css`
     background-color: white;
-    margin: 0 12px;
     border-radius: 16px;
     border: none;
   `,

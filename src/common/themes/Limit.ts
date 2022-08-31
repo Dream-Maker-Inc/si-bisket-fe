@@ -1,11 +1,11 @@
 // 반응형 포인트
 export const BreakPoints = {
-  xs: 376,
+  xs: 360,
   sm: 576,
   md: 679, // Mobile
   lg: 900,
-  xl: 1025, // Tablet
-  xxl: 1369, // Laptop
+  xl: 1024, // Tablet
+  xxl: 1368, // Laptop
 }
 
 // 미디어 쿼리

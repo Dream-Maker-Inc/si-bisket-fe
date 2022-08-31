@@ -1,6 +1,8 @@
 import { Button, Stack, Typography } from '@mui/material'
 import { css } from '@emotion/react'
 import { ProfileChip } from '@/common/components/ProfileChip'
+import { MediaQueries } from '@/common/themes/Limit'
+import { getTypoSizePx } from '@/common/themes/Typography'
 
 const CaptionContainer = () => (
   <Stack direction='row' mt={5}>
@@ -32,7 +34,7 @@ const BuyContainer = () => (
 
 export const CollectionInformation = () => (
   <Stack justifyContent='center' ml={11.5}>
-    <Typography variant='h1' fontWeight='bold'>
+    <Typography variant='h1' fontWeight='bold' css={style.title}>
       The Fall Of An Angelthe Fall Of An Angel
     </Typography>
 
@@ -46,6 +48,11 @@ export const CollectionInformation = () => (
 )
 
 const style = {
+  title: css`
+    @media (${MediaQueries.xxl}) {
+      font-size: ${getTypoSizePx('h2')};
+    }
+  `,
   button: css`
     width: fit-content;
     min-width: 414px;
