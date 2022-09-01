@@ -1,6 +1,7 @@
 import { Stack, Typography } from '@mui/material'
 import { CardProfile } from '@/common/components/CardProfile'
 import { css } from '@emotion/react'
+import { MediaQueries } from '@/common/themes/Limit'
 
 export const CardItem = () => (
   <Stack css={style.card}>
@@ -10,6 +11,7 @@ export const CardItem = () => (
         height={316}
         src='/main/curated-list-thumbnail.png'
         alt=''
+        css={style.image}
       />
       <Stack pl={3}>
         <CardProfile avatar='/main/profile.png' text='@ARTISTDA' />
@@ -29,5 +31,17 @@ const style = {
     background-color: white;
     border-radius: 16px;
     border: none;
+
+    @media (${MediaQueries.md}) {
+      width: 100%;
+    }
+  `,
+  image: css`
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    @media (${MediaQueries.md}) {
+      width: 100%;
+    }
   `,
 }

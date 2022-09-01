@@ -34,6 +34,10 @@ const style = {
     @media (${MediaQueries.xxl}) {
       max-width: 1076px;
     }
+
+    @media (${MediaQueries.md}) {
+      margin-top: 60px;
+    }
   `,
   title: css`
     font-weight: bold;
@@ -41,6 +45,11 @@ const style = {
 
     @media (${MediaQueries.xl}) {
       padding-left: 26px;
+    }
+
+    @media (${MediaQueries.md}) {
+      font-size: 24px;
+      padding-left: 24px;
     }
   `,
 }

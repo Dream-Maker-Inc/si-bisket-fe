@@ -5,7 +5,7 @@ import { MediaQueries } from '@/common/themes/Limit'
 
 export const CollectionSection = () => (
   <Stack direction='row' css={style.root} component='section'>
-    <img src='/main/thumbnail-main.png' alt='bisket' css={style.image} />
+    <img src='/main/thumbnail-main.png' css={style.image} />
 
     <CollectionInformation />
   </Stack>
@@ -15,7 +15,7 @@ const style = {
   root: css`
     width: 100%;
     max-width: 1400px;
-    margin: 100px auto;
+    margin: 100px auto 0;
 
     @media (${MediaQueries.xxl}) {
       max-width: 1076px;
@@ -37,6 +37,10 @@ const style = {
 
     @media (${MediaQueries.xl}) {
       max-width: 445px;
+    }
+
+    @media (${MediaQueries.md}) {
+      width: 100%;
     }
   `,
 }

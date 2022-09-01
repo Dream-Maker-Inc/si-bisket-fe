@@ -32,5 +32,9 @@ const style = {
       max-width: 1076px;
       padding: 0 29px;
     }
+
+    @media (${MediaQueries.md}) {
+      width: 100%;
+    }
   `,
 }
