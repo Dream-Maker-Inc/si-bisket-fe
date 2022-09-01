@@ -27,6 +27,7 @@ const WebMenubar = () => (
 
 const TabletMenubar = () => (
   <Stack direction='row'>
+    <Profile isLogin />
     <IconButton css={style.icon}>
       <SearchRounded />
     </IconButton>
