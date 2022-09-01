@@ -53,6 +53,8 @@ const style = {
     margin-left: 92px;
 
     @media (${MediaQueries.xl}) {
+      width: 100%;
+      padding: 26px;
       margin-left: 0;
     }
   `,

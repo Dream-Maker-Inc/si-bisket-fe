@@ -1,5 +1,6 @@
 import { Button, Stack, Typography } from '@mui/material'
 import { css } from '@emotion/react'
+import { MediaQueries } from '@/common/themes/Limit'
 
 export const EnrollBanner = () => (
   <Stack css={style.root}>
@@ -14,11 +15,9 @@ export const EnrollBanner = () => (
       <Typography variant='h1' color='white' fontWeight='bold'>
         Are you
       </Typography>
-      <img src='/main/banner-text.svg' alt='' style={{ marginTop: 20 }} />
+      <img src='/main/banner-text.svg' alt='' css={style.bannerText} />
       <Button variant='contained' css={style.button}>
-        <Typography variant='subtitle1' color='black' fontWeight='bold'>
-          작가지원 하기
-        </Typography>
+        작가지원 하기
       </Button>
     </Stack>
   </Stack>
@@ -51,14 +50,30 @@ const style = {
   topLine: css`
     ${lineStyle};
     top: 3%;
+
+    @media (${MediaQueries.xl}) {
+      display: none;
+    }
   `,
   bottomLine: css`
     ${lineStyle};
     bottom: 3%;
+
+    @media (${MediaQueries.xl}) {
+      display: none;
+    }
   `,
   video: css`
     position: absolute;
     width: 100%;
+  `,
+  bannerText: css`
+    margin-top: 20px;
+
+    @media (${MediaQueries.xl}) {
+      margin-top: 16px;
+      width: 647px;
+    }
   `,
   wrapper: css`
     position: absolute;
@@ -73,12 +88,20 @@ const style = {
     padding: 18px 46px;
     background-color: white;
     transition: 0.2s;
+    color: black;
+    font-weight: bold;
 
     &:hover {
       background-color: white;
       transform: translateY(-3%);
       transition: 0.2s;
       z-index: 999;
+    }
+
+    @media (${MediaQueries.xl}) {
+      height: 50px;
+      margin-top: 36px;
+      font-size: 16px;
     }
   `,
 }

@@ -27,5 +27,10 @@ const style = {
       padding: 0 49px;
       height: auto;
     }
+
+    @media (${MediaQueries.xl}) {
+      max-width: 1076px;
+      padding: 0 29px;
+    }
   `,
 }

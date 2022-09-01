@@ -33,13 +33,18 @@ const style = {
     @media (${MediaQueries.xxl}) {
       height: 616px;
     }
+
+    @media (${MediaQueries.xl}) {
+      border-radius: 0;
+      height: 616px;
+    }
   `,
   image: css`
     position: absolute;
     filter: brightness(50%);
 
     @media (${MediaQueries.xxl}) {
-      width: 1076px;
+      width: 100%;
       height: 616px;
     }
   `,

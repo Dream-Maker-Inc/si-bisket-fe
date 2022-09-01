@@ -45,6 +45,10 @@ const style = {
       margin: 40px 49px 16px 49px;
       padding: 0;
     }
+
+    @media (${MediaQueries.xl}) {
+      margin: 40px 26px 16px 29px;
+    }
   `,
   imageWrapper: css`
     align-items: center;
@@ -88,6 +92,10 @@ const style = {
     @media (${MediaQueries.xxl}) {
       font-size: 34px;
     }
+
+    @media (${MediaQueries.xxl}) {
+      font-size: 24px;
+    }
   `,
   nft: css`
     color: white;
@@ -97,6 +105,10 @@ const style = {
     @media (${MediaQueries.xxl}) {
       margin-top: 8px;
       margin-bottom: 0;
+    }
+
+    @media (${MediaQueries.xl}) {
+      margin-top: 6px;
     }
   `,
 }

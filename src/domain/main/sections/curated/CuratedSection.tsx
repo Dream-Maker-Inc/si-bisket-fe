@@ -7,7 +7,7 @@ import { MediaQueries } from '@/common/themes/Limit'
 export const CuratedSection = () => (
   <section>
     <article css={style.root}>
-      <Typography variant='h4' fontWeight='bold' mb={3}>
+      <Typography variant='h4' css={style.title}>
         Curated collections
       </Typography>
 
@@ -33,6 +33,14 @@ const style = {
 
     @media (${MediaQueries.xxl}) {
       max-width: 1076px;
+    }
+  `,
+  title: css`
+    font-weight: bold;
+    margin-bottom: 24px;
+
+    @media (${MediaQueries.xl}) {
+      padding-left: 26px;
     }
   `,
 }
