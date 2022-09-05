@@ -38,6 +38,10 @@ const style = {
       scroll-snap-type: x mandatory;
       scroll-padding-left: 29px;
       scroll-padding-right: 29px;
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
     }
   `,
 }
