@@ -4,7 +4,7 @@ import { MediaQueries } from '@/common/themes/Limit'
 
 export const TitleThumbnail = () => (
   <Stack css={style.root}>
-    <img src='/main/curated-collection.png' width={94} css={style.image} />
+    <img src='/main/curated-collection.png' css={style.image} />
   </Stack>
 )
 
@@ -22,6 +22,10 @@ const style = {
     @media (${MediaQueries.xxl}) {
       width: 76px;
       height: 76px;
+      border-radius: 10px;
+    }
+
+    @media (${MediaQueries.md}) {
     }
   `,
   image: css`
@@ -31,6 +35,10 @@ const style = {
     @media (${MediaQueries.xxl}) {
       width: 66px;
       height: 66px;
+      border-radius: 10px;
+    }
+
+    @media (${MediaQueries.md}) {
     }
   `,
 }

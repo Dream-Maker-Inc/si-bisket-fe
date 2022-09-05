@@ -9,7 +9,7 @@ import { useCustomMediaQuery } from '@/common/themes/UseCustomMediaQuery'
 import { ProfileChip } from '@/common/components/ProfileChip'
 
 export const CuratedArticle = () => {
-  const { isWebNormal } = useCustomMediaQuery()
+  const { isTablet } = useCustomMediaQuery()
 
   return (
     <article css={style.root}>
@@ -22,7 +22,7 @@ export const CuratedArticle = () => {
       />
       <Stack css={style.container}>
         <TitleContainer />
-        {isWebNormal && (
+        {isTablet && (
           <div style={{ marginBottom: 16, marginLeft: 26 }}>
             <ProfileChip
               image='/main/profile.png'

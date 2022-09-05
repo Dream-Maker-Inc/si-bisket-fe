@@ -5,7 +5,7 @@ import { MediaQueries } from '@/common/themes/Limit'
 import { useCustomMediaQuery } from '@/common/themes/UseCustomMediaQuery'
 
 export const TitleInformation = () => {
-  const { isWebNormal } = useCustomMediaQuery()
+  const { isTablet } = useCustomMediaQuery()
 
   return (
     <Stack css={style.root}>
@@ -17,7 +17,7 @@ export const TitleInformation = () => {
           4 NFTs
         </Typography>
       </div>
-      {isWebNormal ? (
+      {isTablet ? (
         <div></div>
       ) : (
         <ProfileChip image='/main/profile.png' text='@USERNAME' hoverEvent />
@@ -29,9 +29,9 @@ export const TitleInformation = () => {
 const style = {
   root: css`
     @media (${MediaQueries.xxl}) {
+      flex: 1;
       flex-direction: row;
       justify-content: space-between;
-      width: 100%;
       margin-left: 24px;
     }
 
