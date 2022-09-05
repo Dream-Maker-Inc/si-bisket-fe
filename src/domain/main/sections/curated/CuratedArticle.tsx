@@ -5,22 +5,37 @@ import {
   TitleContainer,
 } from '@/domain/main/sections/curated/card'
 import { MediaQueries } from '@/common/themes/Limit'
+import { useCustomMediaQuery } from '@/common/themes/UseCustomMediaQuery'
+import { ProfileChip } from '@/common/components/ProfileChip'
 
-export const CuratedArticle = () => (
-  <article css={style.root}>
-    <img
-      css={style.image}
-      src='/main/curated-background.png'
-      alt=''
-      width={1392}
-      height={524}
-    />
-    <Stack css={style.container}>
-      <TitleContainer />
-      <CardContainer />
-    </Stack>
-  </article>
-)
+export const CuratedArticle = () => {
+  const { isWebNormal } = useCustomMediaQuery()
+
+  return (
+    <article css={style.root}>
+      <img
+        css={style.image}
+        src='/main/curated-background.png'
+        alt=''
+        width={1392}
+        height={524}
+      />
+      <Stack css={style.container}>
+        <TitleContainer />
+        {isWebNormal && (
+          <div style={{ marginBottom: 16, marginLeft: 26 }}>
+            <ProfileChip
+              image='/main/profile.png'
+              text='@USERNAME'
+              hoverEvent
+            />
+          </div>
+        )}
+        <CardContainer />
+      </Stack>
+    </article>
+  )
+}
 
 const style = {
   root: css`

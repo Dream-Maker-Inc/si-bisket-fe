@@ -15,11 +15,6 @@ export const TitleInformation = () => {
         </Typography>
         <Typography variant='body1' css={style.count}>
           4 NFTs
-          {isWebNormal && (
-            <Typography variant='body1' style={{ marginLeft: 20 }}>
-              @USERNAME
-            </Typography>
-          )}
         </Typography>
       </div>
       {isWebNormal ? (
