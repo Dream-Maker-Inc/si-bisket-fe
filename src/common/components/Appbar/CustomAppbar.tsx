@@ -1,7 +1,6 @@
 import {
   AppBar,
   AppBarProps,
-  IconButton,
   Stack,
   Toolbar,
   ToolbarProps,
@@ -11,7 +10,7 @@ import Link from 'next/link'
 import { Menu } from '@/common/components/Appbar/Menu'
 import { Profile } from '@/common/components/Appbar/Profile'
 import { useCustomMediaQuery } from '@/common/themes/UseCustomMediaQuery'
-import { MenuRounded, SearchRounded } from '@mui/icons-material'
+import { TabletMenubar } from '@/common/components/Appbar/responsive-menu/TabletMenubar'
 
 export interface CustomAppbarProps {
   appbarProps?: AppBarProps
@@ -22,18 +21,6 @@ const WebMenubar = () => (
   <Stack direction='row' alignItems='center' gap={4}>
     <Menu />
     <Profile isLogin />
-  </Stack>
-)
-
-const TabletMenubar = () => (
-  <Stack direction='row'>
-    <Profile isLogin />
-    <IconButton css={style.icon}>
-      <SearchRounded />
-    </IconButton>
-    <IconButton css={style.icon} sx={{ marginLeft: 1.25 }}>
-      <MenuRounded />
-    </IconButton>
   </Stack>
 )
 
