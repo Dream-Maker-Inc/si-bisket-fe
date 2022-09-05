@@ -4,15 +4,14 @@ import { MediaQueries } from '@/common/themes/Limit'
 
 export const EnrollBanner = () => (
   <Stack css={style.root}>
-    <Stack css={style.videoWrapper}>
-      <video autoPlay muted loop css={style.video}>
-        <source src='/main/video.mp4' />
-      </video>
-      <div css={style.topLine} />
-      <div css={style.bottomLine} />
+    <Stack css={style.imageWrapper}>
+      <img
+        src='https://media.giphy.com/media/1zRfp0Jwsag4yPekP4/giphy.gif'
+        css={style.image}
+      />
     </Stack>
     <Stack css={style.wrapper}>
-      <Typography variant='h1' color='white' fontWeight='bold'>
+      <Typography css={style.bannerTitle} variant='h1'>
         Are you
       </Typography>
       <img src='/main/banner-text.svg' alt='' css={style.bannerText} />
@@ -38,7 +37,7 @@ const style = {
 
     height: 500px;
   `,
-  videoWrapper: css`
+  imageWrapper: css`
     position: absolute;
     align-items: center;
     justify-content: center;
@@ -63,12 +62,25 @@ const style = {
       display: none;
     }
   `,
-  video: css`
+  image: css`
     position: absolute;
     width: 100%;
   `,
+  bannerTitle: css`
+    color: white;
+    font-weight: bold;
+
+    @media (${MediaQueries.xl}) {
+      font-size: 40px;
+    }
+  `,
   bannerText: css`
     margin-top: 20px;
+
+    @media (${MediaQueries.xxl}) {
+      margin-top: 20px;
+      width: 1023px;
+    }
 
     @media (${MediaQueries.xl}) {
       margin-top: 16px;
@@ -89,6 +101,7 @@ const style = {
     background-color: white;
     transition: 0.2s;
     color: black;
+    font-size: 18px;
     font-weight: bold;
 
     &:hover {

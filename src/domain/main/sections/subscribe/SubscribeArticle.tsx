@@ -1,5 +1,6 @@
 import { Button } from '@mui/material'
 import { css } from '@emotion/react'
+import { MediaQueries } from '@/common/themes/Limit'
 
 export const SubscribeArticle = () => (
   <article>
@@ -32,6 +33,11 @@ const style = {
       background-color: black;
       transform: translateX(-50%) translateY(-55%);
       transition: 0.3s;
+    }
+
+    @media (${MediaQueries.md}) {
+      font-size: 16px;
+      padding: 15px 25px;
     }
   `,
 }

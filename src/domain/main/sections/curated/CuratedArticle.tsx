@@ -53,6 +53,10 @@ const style = {
       border-radius: 0;
       height: 616px;
     }
+
+    @media (${MediaQueries.md}) {
+      height: 682px;
+    }
   `,
   image: css`
     position: absolute;
@@ -61,6 +65,11 @@ const style = {
     @media (${MediaQueries.xxl}) {
       width: 100%;
       height: 616px;
+    }
+
+    @media (${MediaQueries.md}) {
+      width: 100%;
+      height: 682px;
     }
   `,
   container: css`

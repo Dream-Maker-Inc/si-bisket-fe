@@ -6,7 +6,7 @@ import { useCustomMediaQuery } from '@/common/themes/UseCustomMediaQuery'
 
 export const StartBanner = () => {
   const { isTablet, isWebNormal } = useCustomMediaQuery()
-  const slidesPerView = isTablet ? 0.6 : isWebNormal ? 1.1 : 2
+  const slidesPerView = isTablet ? 0.5 : isWebNormal ? 1.1 : 2
 
   return (
     <Swiper
@@ -18,27 +18,27 @@ export const StartBanner = () => {
         delay: 1,
         disableOnInteraction: false,
       }}
-      speed={3000}
+      speed={8000}
       modules={[Autoplay]}
       simulateTouch={false}
     >
       <SwiperSlide>
-        <img src='/main/start-banner-1.svg' alt='' />
+        <img src='/main/start-banner-1.png' alt='' width={616} />
       </SwiperSlide>
       <SwiperSlide>
-        <img src='/main/start-banner-2.svg' alt='' />
+        <img src='/main/start-banner-2.png' alt='' width={616} />
       </SwiperSlide>
       <SwiperSlide>
-        <img src='/main/start-banner-1.svg' alt='' />
+        <img src='/main/start-banner-1.png' alt='' width={616} />
       </SwiperSlide>
       <SwiperSlide>
-        <img src='/main/start-banner-2.svg' alt='' />
+        <img src='/main/start-banner-2.png' alt='' width={616} />
       </SwiperSlide>
       <SwiperSlide>
-        <img src='/main/start-banner-1.svg' alt='' />
+        <img src='/main/start-banner-1.png' alt='' width={616} />
       </SwiperSlide>
       <SwiperSlide>
-        <img src='/main/start-banner-2.svg' alt='' />
+        <img src='/main/start-banner-2.png' alt='' width={616} />
       </SwiperSlide>
     </Swiper>
   )
