@@ -49,6 +49,8 @@ const style = {
 
     @media (${MediaQueries.md}) {
       width: 100%;
+      scroll-snap-align: start;
+      scroll-snap-stop: normal;
     }
   `,
   imageWrapper: css`
@@ -57,7 +59,6 @@ const style = {
     height: 316px;
 
     @media (${MediaQueries.xl}) {
-      width: 100%;
       object-fit: contain;
     }
   `,
