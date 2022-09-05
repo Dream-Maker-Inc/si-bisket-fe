@@ -46,11 +46,21 @@ export const CustomAppbar = ({
   return (
     <AppBar position='fixed' {...appbarProps}>
       <Toolbar {...toolbarProps} css={style.toolbar}>
-        <Link href='/'>
-          <img src='/logo.png' alt='' style={{ cursor: 'pointer' }} />
-        </Link>
+        <Stack css={style.wrapper}>
+          <Link href='/'>
+            <img
+              src='/logo.png'
+              alt=''
+              style={{
+                width: '126.3px',
+                height: '23.6px',
+                cursor: 'pointer',
+              }}
+            />
+          </Link>
 
-        {isWebNormal ? <TabletMenubar /> : <WebMenubar />}
+          {isWebNormal ? <TabletMenubar /> : <WebMenubar />}
+        </Stack>
       </Toolbar>
     </AppBar>
   )
@@ -67,8 +77,16 @@ const style = {
   `,
   toolbar: css`
     width: 100%;
-    justify-content: space-between;
     height: 80px;
+    justify-content: space-between;
     background-color: white;
+  `,
+  wrapper: css`
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1392px;
+    margin: 0 auto;
   `,
 }
