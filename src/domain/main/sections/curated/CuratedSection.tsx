@@ -35,6 +35,10 @@ const style = {
       max-width: 1076px;
     }
 
+    @media (${MediaQueries.xl}) {
+      margin: 12px auto;
+    }
+
     @media (${MediaQueries.md}) {
       margin-top: 60px;
     }

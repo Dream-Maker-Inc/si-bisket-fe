@@ -4,12 +4,10 @@ import { MediaQueries } from '@/common/themes/Limit'
 
 export const EnrollBanner = () => (
   <Stack css={style.root}>
-    <Stack css={style.imageWrapper}>
-      <img
-        src='https://media.giphy.com/media/1zRfp0Jwsag4yPekP4/giphy.gif'
-        css={style.image}
-      />
-    </Stack>
+    <img
+      src='https://media.giphy.com/media/1zRfp0Jwsag4yPekP4/giphy.gif'
+      css={style.image}
+    />
     <Stack css={style.wrapper}>
       <Typography css={style.bannerTitle} variant='h1'>
         Are you
@@ -37,15 +35,6 @@ const style = {
 
     height: 500px;
   `,
-  imageWrapper: css`
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-  `,
   topLine: css`
     ${lineStyle};
     top: 3%;
@@ -65,6 +54,11 @@ const style = {
   image: css`
     position: absolute;
     width: 100%;
+    height: 594px;
+
+    @media (${MediaQueries.xl}) {
+      height: 448px;
+    }
   `,
   bannerTitle: css`
     color: white;
@@ -85,6 +79,12 @@ const style = {
     @media (${MediaQueries.xl}) {
       margin-top: 16px;
       width: 647px;
+    }
+
+    @media (${MediaQueries.md}) {
+      content: url('/main/banner-text.svg');
+      width: 273px;
+      height: 120px;
     }
   `,
   wrapper: css`
