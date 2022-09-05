@@ -2,20 +2,34 @@ import { Stack, Typography } from '@mui/material'
 import { ProfileChip } from '@/common/components/ProfileChip'
 import { css } from '@emotion/react'
 import { MediaQueries } from '@/common/themes/Limit'
+import { useCustomMediaQuery } from '@/common/themes/UseCustomMediaQuery'
 
-export const TitleInformation = () => (
-  <Stack css={style.root}>
-    <div>
-      <Typography variant='h4' css={style.title}>
-        Collection Name Of Collection
-      </Typography>
-      <Typography variant='body1' css={style.count}>
-        4 NFTs
-      </Typography>
-    </div>
-    <ProfileChip image='/main/profile.png' text='@USERNAME' hoverEvent />
-  </Stack>
-)
+export const TitleInformation = () => {
+  const { isWebNormal } = useCustomMediaQuery()
+
+  return (
+    <Stack css={style.root}>
+      <div>
+        <Typography variant='h4' css={style.title}>
+          Collection Name Of Collection
+        </Typography>
+        <Typography variant='body1' css={style.count}>
+          4 NFTs
+          {isWebNormal && (
+            <Typography variant='body1' style={{ marginLeft: 20 }}>
+              @USERNAME
+            </Typography>
+          )}
+        </Typography>
+      </div>
+      {isWebNormal ? (
+        <div></div>
+      ) : (
+        <ProfileChip image='/main/profile.png' text='@USERNAME' hoverEvent />
+      )}
+    </Stack>
+  )
+}
 
 const style = {
   root: css`
@@ -24,6 +38,12 @@ const style = {
       justify-content: space-between;
       width: 100%;
       margin-left: 24px;
+    }
+
+    @media (${MediaQueries.md}) {
+      flex-direction: column;
+      gap: 10px;
+      height: 100px;
     }
   `,
   title: css`
@@ -43,6 +63,8 @@ const style = {
     }
   `,
   count: css`
+    display: flex;
+    align-items: center;
     color: white;
     margin-top: 4px;
     margin-bottom: 24px;

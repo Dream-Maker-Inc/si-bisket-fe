@@ -2,6 +2,7 @@ import { Stack } from '@mui/material'
 import { CardItem } from '@/domain/main/sections/curated/card/CardItem'
 import { css } from '@emotion/react'
 import { MediaQueries } from '@/common/themes/Limit'
+import 'swiper/css'
 
 export const CardContainer = () => (
   <Stack css={style.root}>

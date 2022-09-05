@@ -55,6 +55,11 @@ const style = {
     position: relative;
     width: 310px;
     height: 316px;
+
+    @media (${MediaQueries.xl}) {
+      width: 100%;
+      object-fit: contain;
+    }
   `,
   image: css`
     position: absolute;
@@ -62,6 +67,10 @@ const style = {
     height: 316px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+
+    @media (${MediaQueries.xl}) {
+      width: 100%;
+    }
 
     @media (${MediaQueries.md}) {
       width: 100%;
