@@ -55,6 +55,10 @@ const style = {
 
     @media ${MediaQueries.xxl} {
       font-size: 24px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
     }
   `,
   count: css`
