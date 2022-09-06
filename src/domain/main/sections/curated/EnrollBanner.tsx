@@ -82,7 +82,7 @@ const style = {
     }
 
     @media (${MediaQueries.md}) {
-      content: url('/main/banner-text.svg');
+      content: url('/main/banner-text-mb.svg');
       width: 273px;
       height: 120px;
     }
@@ -98,15 +98,16 @@ const style = {
     margin-top: 33px;
     border-radius: 40px;
     padding: 18px 46px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.3);
     transition: 0.2s;
-    color: black;
+    color: white;
     font-size: 18px;
     font-weight: bold;
 
     &:hover {
-      background-color: white;
+      background-color: rgb(255, 255, 255);
       transform: translateY(-3%);
+      color: black;
       transition: 0.2s;
       z-index: 999;
     }
