@@ -25,7 +25,7 @@ export const TabletMenubar = () => {
           <Stack css={style.wrapper}>
             <Link href='/'>
               <img
-                src='/logo.png'
+                src='/logo.svg'
                 alt=''
                 style={{
                   width: '126.3px',
