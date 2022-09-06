@@ -30,7 +30,7 @@ export const Menu = () => (
 
 const style = {
   menu: css`
-    font-weight: bold;
+    font-weight: 600;
     color: black;
     cursor: pointer;
   `,

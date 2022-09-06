@@ -15,7 +15,7 @@ export const CollectionInformation = () => (
     <InformationBuy />
 
     <Button variant='contained' css={style.button}>
-      View Nft
+      View NFT
     </Button>
   </Stack>
 )
