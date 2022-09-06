@@ -39,6 +39,10 @@ const style = {
       scroll-padding-right: 29px;
       max-width: 1076px;
       padding: 0 29px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
 
     @media ${MediaQueries.md} {
@@ -46,6 +50,10 @@ const style = {
       scroll-snap-type: x mandatory;
       scroll-padding-left: 29px;
       scroll-padding-right: 29px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   `,
 }
