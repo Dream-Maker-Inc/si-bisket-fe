@@ -45,13 +45,23 @@ const style = {
     }
   `,
   inputRoot: css`
+    justify-content: center;
     flex-direction: row;
     margin: 60px auto 200px;
 
+    @media ${MediaQueries.xl} {
+      width: 100%;
+      margin: 60px auto 200px;
+    }
+
+    @media (max-width: 780px) {
+      padding: 0 40px;
+    }
+
     @media ${MediaQueries.md} {
       width: 100%;
-      margin-left: 0;
-      margin-right: 0;
+      margin-left: auto;
+      margin-right: auto;
       flex-direction: column;
       margin-top: 40px;
     }
@@ -82,7 +92,7 @@ const style = {
     font-size: 20px;
     background-color: black;
     border-radius: 40px;
-    transform: translateX(-30%);
+    margin-left: -100px;
 
     &:hover {
       color: white;
@@ -90,9 +100,12 @@ const style = {
       background-color: black;
     }
 
+    @media ${MediaQueries.xl} {
+      margin-left: -100px;
+    }
+
     @media ${MediaQueries.md} {
       margin: 0 auto;
-      transform: translateX(0%);
     }
   `,
 }
