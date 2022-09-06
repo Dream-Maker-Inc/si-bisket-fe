@@ -4,10 +4,7 @@ import { MediaQueries } from '@/common/themes/Limit'
 
 export const EnrollBanner = () => (
   <Stack css={style.root}>
-    <img
-      src='https://media.giphy.com/media/1zRfp0Jwsag4yPekP4/giphy.gif'
-      css={style.image}
-    />
+    <img src='/main/enroll-background.gif' css={style.image} />
     <Stack css={style.wrapper}>
       <Typography css={style.bannerTitle} variant='h1'>
         Are you
