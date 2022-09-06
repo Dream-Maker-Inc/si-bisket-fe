@@ -12,35 +12,50 @@ import { Menu } from '@/common/components/Appbar/Menu'
 import { Profile } from '@/common/components/Appbar/Profile'
 import { useCustomMediaQuery } from '@/common/themes/UseCustomMediaQuery'
 import { TabletMenubar } from '@/common/components/Appbar/responsive-menu/TabletMenubar'
+import { useState } from 'react'
 
 export interface CustomAppbarProps {
   appbarProps?: AppBarProps
   toolbarProps?: ToolbarProps
 }
 
-const WebMenubar = () => (
-  <Stack direction='row' alignItems='center' gap={4}>
-    <Menu />
-    <Profile isLogin />
-    <Stack direction='row'>
-      <Link href='/'>
-        <Typography variant='subtitle2' css={style.language}>
-          ENG
-        </Typography>
-      </Link>
-      <Link href='/'>
+const WebMenubar = () => {
+  const [language, setLanguage] = useState('kor')
+  const changeLanguageToKOR = () => setLanguage('kor')
+  const changeLanguageToENG = () => setLanguage('eng')
+
+  console.log(language)
+
+  return (
+    <Stack direction='row' alignItems='center' gap={4}>
+      <Menu />
+      <Profile isLogin />
+      <Stack direction='row' alignItems='center'>
+        <div css={style.languageWrapper}>
+          <Typography
+            onClick={changeLanguageToENG}
+            variant='subtitle2'
+            css={language === 'eng' ? style.language : style.languageActive}
+          >
+            ENG
+          </Typography>
+        </div>
         <Typography variant='subtitle2' css={style.languageDivider}>
           |
         </Typography>
-      </Link>
-      <Link href='/'>
-        <Typography variant='subtitle2' css={style.languageInactive}>
-          KOR
-        </Typography>
-      </Link>
+        <div css={style.languageWrapper}>
+          <Typography
+            onClick={changeLanguageToKOR}
+            variant='subtitle2'
+            css={language === 'kor' ? style.language : style.languageActive}
+          >
+            KOR
+          </Typography>
+        </div>
+      </Stack>
     </Stack>
-  </Stack>
-)
+  )
+}
 
 export const CustomAppbar = ({
   appbarProps,
@@ -86,6 +101,17 @@ const style = {
     max-width: 1392px;
     margin: 0 auto;
   `,
+  languageWrapper: css`
+    padding: 4px;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1019607843);
+      transition: 0.5s;
+    }
+  `,
   language: css`
     color: black;
     font-weight: 500;
@@ -96,8 +122,8 @@ const style = {
     font-weight: 500;
     margin: 0 4px;
   `,
-  languageInactive: css`
-    color: #ddd;
+  languageActive: css`
+    color: rgba(17, 17, 17, 0.3019607843);
     font-weight: 500;
     cursor: pointer;
   `,
