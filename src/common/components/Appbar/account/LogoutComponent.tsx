@@ -26,11 +26,11 @@ const style = {
     padding: 11px 28px;
     border: 0.5px solid black;
     border-radius: 20px;
-    font-weight: bold;
+    font-weight: 500;
     transition: 0.3s;
 
     &:hover {
-      font-weight: bold;
+      font-weight: 500;
       border: 1px solid black;
       transition: 0.3s;
       background-color: black;

@@ -96,17 +96,17 @@ const style = {
   `,
   language: css`
     color: black;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
   `,
   languageDivider: css`
     color: #999;
-    font-weight: 600;
+    font-weight: 500;
     margin: 0 4px;
   `,
   languageInactive: css`
     color: #ddd;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
   `,
 }
