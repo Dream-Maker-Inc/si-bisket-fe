@@ -17,13 +17,9 @@ export const CardItem = () => {
       onMouseEnter={handleHoverChange}
       onMouseLeave={handleNoHoverChange}
     >
-      <Stack style={{ padding: 0 }}>
+      <Stack css={style.container}>
         <div css={style.imageWrapper}>
-          <img
-            src='/main/curated-list-thumbnail.png'
-            alt=''
-            css={style.image}
-          />
+          <div css={style.image} />
           {hover && <CardItemHover />}
         </div>
         <Stack pl={3}>
@@ -53,6 +49,12 @@ const style = {
       scroll-snap-stop: normal;
     }
   `,
+  container: css`
+    padding: 0;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  `,
   imageWrapper: css`
     position: relative;
     width: 310px;
@@ -68,6 +70,8 @@ const style = {
     height: 316px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    background-position: center;
+    background-image: url('/main/curated-list-thumbnail.png');
 
     @media (${MediaQueries.xl}) {
       width: 100%;
