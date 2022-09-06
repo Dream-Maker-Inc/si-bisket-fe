@@ -24,8 +24,6 @@ const WebMenubar = () => {
   const changeLanguageToKOR = () => setLanguage('kor')
   const changeLanguageToENG = () => setLanguage('eng')
 
-  console.log(language)
-
   return (
     <Stack direction='row' alignItems='center' gap={4}>
       <Menu />
