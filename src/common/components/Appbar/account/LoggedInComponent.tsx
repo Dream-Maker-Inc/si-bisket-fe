@@ -21,7 +21,7 @@ export const LoggedInComponent = () => {
 
   const handleClose = () => setAnchorEl(null)
 
-  return isTablet ? (
+  return isWebNormal ? (
     <div>
       <IconButton css={style.icon} onClick={handleClick}>
         <img src='/main/profile.png' alt='' width={28} />
