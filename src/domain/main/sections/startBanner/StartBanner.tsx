@@ -6,7 +6,7 @@ import { useCustomMediaQuery } from '@/common/themes/UseCustomMediaQuery'
 
 export const StartBanner = () => {
   const { isTablet, isWebNormal } = useCustomMediaQuery()
-  const slidesPerView = isTablet ? 0.5 : isWebNormal ? 1.1 : 2
+  const slidesPerView = isTablet ? 0.5 : isWebNormal ? 1.1 : 1.5
 
   return (
     <Swiper
