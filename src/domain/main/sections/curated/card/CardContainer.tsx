@@ -28,6 +28,10 @@ const style = {
       height: auto;
     }
 
+    @media (max-width: 1100px) {
+      overflow: auto;
+    }
+
     @media ${MediaQueries.xl} {
       overflow: auto;
       scroll-snap-type: x mandatory;

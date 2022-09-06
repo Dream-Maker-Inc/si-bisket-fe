@@ -21,6 +21,10 @@ const style = {
       max-width: 1076px;
     }
 
+    @media (max-width: 1100px) {
+      padding: 40px;
+    }
+
     @media ${MediaQueries.xl} {
       max-width: 100%;
       padding: 0 26px;
