@@ -4,6 +4,7 @@ import {
   Stack,
   Toolbar,
   ToolbarProps,
+  Typography,
 } from '@mui/material'
 import { css } from '@emotion/react'
 import Link from 'next/link'
@@ -21,6 +22,23 @@ const WebMenubar = () => (
   <Stack direction='row' alignItems='center' gap={4}>
     <Menu />
     <Profile isLogin />
+    <Stack direction='row'>
+      <Link href='/'>
+        <Typography variant='subtitle2' css={style.language}>
+          ENG
+        </Typography>
+      </Link>
+      <Link href='/'>
+        <Typography variant='subtitle2' css={style.languageDivider}>
+          |
+        </Typography>
+      </Link>
+      <Link href='/'>
+        <Typography variant='subtitle2' css={style.languageInactive}>
+          KOR
+        </Typography>
+      </Link>
+    </Stack>
   </Stack>
 )
 
@@ -75,5 +93,20 @@ const style = {
     width: 100%;
     max-width: 1392px;
     margin: 0 auto;
+  `,
+  language: css`
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+  `,
+  languageDivider: css`
+    color: #999;
+    font-weight: 600;
+    margin: 0 4px;
+  `,
+  languageInactive: css`
+    color: #ddd;
+    font-weight: 600;
+    cursor: pointer;
   `,
 }
