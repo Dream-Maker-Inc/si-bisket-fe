@@ -56,12 +56,12 @@ const style = {
     flex-direction: row;
     margin-top: 52px;
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       flex-direction: column;
       margin-top: 32px;
     }
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       flex-direction: column;
       margin-top: 24px;
     }
@@ -69,11 +69,11 @@ const style = {
   subroot: css`
     margin-left: 146px;
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       margin-left: 71px;
     }
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       margin-left: 0;
     }
   `,
@@ -83,16 +83,16 @@ const style = {
     border-radius: 20px;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.16);
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       width: 475px;
       height: 522px;
     }
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       margin: auto auto 80px;
     }
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       width: 100%;
       height: fit-content;
     }
@@ -107,7 +107,7 @@ const style = {
     margin-top: 50px;
   `,
   wrapper: css`
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       justify-content: space-between;
     }
   `,
@@ -115,7 +115,7 @@ const style = {
     width: 230px;
     font-size: 24px;
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       width: auto;
     }
   `,
@@ -128,7 +128,7 @@ const style = {
     word-break: break-all;
     text-align: justify;
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       margin-left: 0;
     }
   `,

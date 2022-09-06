@@ -31,15 +31,15 @@ const style = {
     max-width: 1392px;
     margin: 100px auto;
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       max-width: 1076px;
     }
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       margin: 12px auto;
     }
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       margin-top: 60px;
     }
   `,
@@ -47,11 +47,11 @@ const style = {
     font-weight: bold;
     margin-bottom: 24px;
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       padding-left: 26px;
     }
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       font-size: 24px;
       padding-left: 24px;
     }

@@ -17,7 +17,7 @@ const style = {
     padding: 40px;
     justify-content: space-between;
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       flex-direction: row;
       justify-content: flex-start;
       height: 76px;
@@ -25,7 +25,7 @@ const style = {
       padding: 0;
     }
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       margin: 40px 26px 16px 29px;
     }
   `,

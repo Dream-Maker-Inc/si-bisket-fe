@@ -39,7 +39,7 @@ const style = {
     ${lineStyle};
     top: 3%;
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       display: none;
     }
   `,
@@ -47,7 +47,7 @@ const style = {
     ${lineStyle};
     bottom: 3%;
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       display: none;
     }
   `,
@@ -56,7 +56,7 @@ const style = {
     width: 100%;
     height: 594px;
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       height: 448px;
     }
   `,
@@ -64,24 +64,24 @@ const style = {
     color: white;
     font-weight: bold;
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       font-size: 40px;
     }
   `,
   bannerText: css`
     margin-top: 20px;
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       margin-top: 20px;
       width: 1023px;
     }
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       margin-top: 16px;
       width: 647px;
     }
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       content: url('/main/banner-text-mb.svg');
       width: 273px;
       height: 120px;
@@ -112,7 +112,7 @@ const style = {
       z-index: 999;
     }
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       height: 50px;
       margin-top: 36px;
       font-size: 16px;

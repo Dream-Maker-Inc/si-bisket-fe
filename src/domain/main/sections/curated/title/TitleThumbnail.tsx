@@ -19,26 +19,26 @@ const style = {
     background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       width: 76px;
       height: 76px;
       border-radius: 10px;
     }
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
     }
   `,
   image: css`
     border-top-left-radius: 47%;
     border-top-right-radius: 47%;
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       width: 66px;
       height: 66px;
       border-radius: 10px;
     }
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
     }
   `,
 }

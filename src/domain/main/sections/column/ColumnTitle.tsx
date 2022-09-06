@@ -45,7 +45,7 @@ const style = {
     font-weight: bold;
     line-height: 44px;
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       text-align: center;
     }
   `,
@@ -61,14 +61,14 @@ const style = {
     background-color: #ddd;
     margin: 20px 0 30px 0;
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       margin: 20px 0;
     }
   `,
   description: css`
     line-height: 28px;
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       text-align: center;
     }
   `,

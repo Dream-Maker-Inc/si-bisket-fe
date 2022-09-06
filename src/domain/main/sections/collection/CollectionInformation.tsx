@@ -25,7 +25,7 @@ const style = {
     justify-content: center;
     margin-left: 92px;
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       width: 100%;
       padding: 26px;
       margin-left: 0;
@@ -34,15 +34,15 @@ const style = {
   title: css`
     font-weight: bold;
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       font-size: ${getTypoSizePx('h2')};
     }
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       margin-top: 31px;
       font-size: 44px;
     }
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       margin-top: 10px;
       font-size: ${getTypoSizePx('h3')};
     }
@@ -61,11 +61,11 @@ const style = {
       transition: 0.2s;
     }
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       width: 100%;
     }
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       width: 100%;
       margin-top: 20px;
     }

@@ -35,7 +35,7 @@ const style = {
       transition: 0.3s;
     }
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       font-size: 16px;
       padding: 15px 25px;
     }

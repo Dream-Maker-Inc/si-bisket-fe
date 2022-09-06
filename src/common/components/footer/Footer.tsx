@@ -63,7 +63,7 @@ const style = {
     width: 100%;
     max-width: 1392px;
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       max-width: 1076px;
     }
   `,
@@ -74,7 +74,7 @@ const style = {
     max-width: 1392px;
     margin-top: 34px;
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       flex-direction: column;
     }
   `,
@@ -89,7 +89,7 @@ const style = {
   info: css`
     flex-direction: column;
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       margin-top: 32px;
     }
 
@@ -97,7 +97,7 @@ const style = {
       color: #999;
       text-align: right;
 
-      @media (${MediaQueries.md}) {
+      @media ${MediaQueries.md} {
         text-align: left;
       }
     }

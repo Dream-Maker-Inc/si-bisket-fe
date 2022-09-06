@@ -17,11 +17,11 @@ const style = {
     max-width: 1400px;
     margin: 100px auto 0;
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       max-width: 1076px;
     }
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       flex-direction: column;
       align-items: center;
     }
@@ -31,15 +31,15 @@ const style = {
     max-height: 500px;
     object-fit: contain;
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       max-width: 450px;
     }
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       max-width: 445px;
     }
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       width: 100%;
     }
   `,

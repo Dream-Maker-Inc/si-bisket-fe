@@ -28,14 +28,14 @@ export const TitleInformation = () => {
 
 const style = {
   root: css`
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       flex: 1;
       flex-direction: row;
       justify-content: space-between;
       margin-left: 24px;
     }
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       flex-direction: column;
       gap: 10px;
       height: 100px;
@@ -49,11 +49,11 @@ const style = {
       text-decoration: underline;
     }
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       font-size: 34px;
     }
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       font-size: 24px;
     }
   `,
@@ -64,12 +64,12 @@ const style = {
     margin-top: 4px;
     margin-bottom: 24px;
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       margin-top: 8px;
       margin-bottom: 0;
     }
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       margin-top: 6px;
     }
   `,

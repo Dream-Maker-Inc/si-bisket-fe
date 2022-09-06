@@ -45,16 +45,16 @@ const style = {
     overflow: hidden;
     border-radius: 20px;
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       height: 616px;
     }
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       border-radius: 0;
       height: 616px;
     }
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       height: 682px;
     }
   `,
@@ -62,12 +62,12 @@ const style = {
     position: absolute;
     filter: brightness(50%);
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       width: 100%;
       height: 616px;
     }
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       width: 100%;
       height: 682px;
     }
@@ -78,7 +78,7 @@ const style = {
     flex-direction: row;
     border-radius: 20px;
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       width: 100%;
       flex-direction: column;
     }

@@ -17,11 +17,11 @@ const style = {
     max-width: 1392px;
     margin: 0 auto;
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       max-width: 1076px;
     }
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       max-width: 100%;
       padding: 0 26px;
     }

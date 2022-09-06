@@ -22,11 +22,11 @@ const style = {
     height: 314px;
     margin: 200px auto 18px;
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       margin-bottom: 12px;
     }
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       width: 198px;
       height: 245px;
     }
@@ -36,11 +36,11 @@ const style = {
     font-weight: bold;
     text-align: center;
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       font-size: ${getTypoSizePx('h3')};
     }
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       font-size: 24px;
     }
   `,
@@ -48,7 +48,7 @@ const style = {
     flex-direction: row;
     margin: 60px auto 200px;
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       width: 100%;
       margin-left: 0;
       margin-right: 0;
@@ -65,11 +65,11 @@ const style = {
     font-size: 17px;
     height: 60px;
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       width: 599px;
     }
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       width: 90%;
       margin: 0 auto 16px;
     }
@@ -90,7 +90,7 @@ const style = {
       background-color: black;
     }
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       margin: 0 auto;
       transform: translateX(0%);
     }

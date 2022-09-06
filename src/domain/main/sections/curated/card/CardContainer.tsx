@@ -20,7 +20,7 @@ const style = {
     height: 524px;
     gap: 24px;
 
-    @media (${MediaQueries.xxl}) {
+    @media ${MediaQueries.xxl} {
       width: 100%;
       max-width: 1076px;
       justify-content: space-between;
@@ -28,7 +28,7 @@ const style = {
       height: auto;
     }
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       overflow: auto;
       scroll-snap-type: x mandatory;
       scroll-padding-left: 29px;
@@ -37,7 +37,7 @@ const style = {
       padding: 0 29px;
     }
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       overflow: auto;
       scroll-snap-type: x mandatory;
       scroll-padding-left: 29px;

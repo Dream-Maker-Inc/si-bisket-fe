@@ -25,23 +25,23 @@ const style = {
     flex-direction: row;
     margin-top: 40px;
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       margin-top: 20px;
     }
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       flex-direction: column;
     }
   `,
   container: css`
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       flex-direction: column;
     }
   `,
   secondContainer: css`
     margin-left: 40px;
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       margin-top: 24px;
       margin-left: 0;
     }

@@ -43,7 +43,7 @@ const style = {
     border: none;
     cursor: pointer;
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       width: 100%;
       scroll-snap-align: start;
       scroll-snap-stop: normal;
@@ -60,7 +60,7 @@ const style = {
     width: 310px;
     height: 316px;
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       object-fit: contain;
     }
   `,
@@ -73,11 +73,11 @@ const style = {
     background-position: center;
     background-image: url('/main/curated-list-thumbnail.png');
 
-    @media (${MediaQueries.xl}) {
+    @media ${MediaQueries.xl} {
       width: 100%;
     }
 
-    @media (${MediaQueries.md}) {
+    @media ${MediaQueries.md} {
       width: 100%;
     }
   `,
