@@ -63,7 +63,6 @@ export const theme = createTheme({
       },
       styleOverrides: {
         root: {
-          borderBottom: `1px solid ${Colors.Border}`,
           backgroundColor: Colors.AppbarBg,
         },
       },
