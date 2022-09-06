@@ -72,14 +72,6 @@ export const CustomAppbar = ({
 }
 
 const style = {
-  icon: css`
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-    color: black;
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.05);
-    border: solid 1px #f2f2f2;
-  `,
   toolbar: css`
     width: 100%;
     height: 80px;

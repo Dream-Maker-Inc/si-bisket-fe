@@ -15,7 +15,7 @@ const style = {
   root: css`
     width: 100%;
     max-width: 1392px;
-    margin: 0 auto;
+    margin: 200px auto 0;
 
     @media ${MediaQueries.xxl} {
       max-width: 1076px;
@@ -28,6 +28,10 @@ const style = {
     @media ${MediaQueries.xl} {
       max-width: 100%;
       padding: 0 26px;
+    }
+
+    @media ${MediaQueries.md} {
+      margin-top: 120px;
     }
   `,
 }
