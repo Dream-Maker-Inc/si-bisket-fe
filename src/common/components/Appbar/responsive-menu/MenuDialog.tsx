@@ -12,6 +12,7 @@ import { Profile } from '@/common/components/Appbar/Profile'
 import { ClearRounded, SearchRounded } from '@mui/icons-material'
 import { css } from '@emotion/react'
 import { useState } from 'react'
+import { MediaQueries } from '@/common/themes/Limit'
 
 type MenuDialogProps = {
   open: boolean
@@ -51,7 +52,7 @@ export const MenuDialog = ({ open, onClose }: MenuDialogProps) => {
       <Stack mt={5} mr={3}>
         {menuText.map((data, idx) => (
           <Link href='/' key={idx}>
-            <Typography variant='h3' fontWeight='bold' textAlign='right'>
+            <Typography variant='h3' css={style.menuText}>
               {data}
             </Typography>
           </Link>
@@ -103,6 +104,14 @@ const style = {
 
     &:hover {
       background-color: black;
+    }
+  `,
+  menuText: css`
+    font-weight: bold;
+    text-align: right;
+
+    @media ${MediaQueries.md} {
+      font-size: 24px;
     }
   `,
   toolbar: css`

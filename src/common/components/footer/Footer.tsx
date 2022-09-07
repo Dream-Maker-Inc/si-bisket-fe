@@ -96,6 +96,7 @@ const style = {
     h6 {
       color: #999;
       text-align: right;
+      font-size: 14px;
 
       @media ${MediaQueries.md} {
         text-align: left;

@@ -73,6 +73,8 @@ const style = {
     }
   `,
   mobileDescription: css`
+    color: #404040;
+    font-weight: 400;
     word-break: break-all;
   `,
 }

@@ -14,8 +14,7 @@ const style = {
     justify-content: center;
     width: 110px;
     height: 136px;
-    border-top-right-radius: 47%;
-    border-top-left-radius: 47%;
+    border-radius: 47% 47% 4% 4%;
     background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
 
@@ -29,8 +28,7 @@ const style = {
     }
   `,
   image: css`
-    border-top-left-radius: 47%;
-    border-top-right-radius: 47%;
+    border-radius: 47% 47% 4% 4%;
 
     @media ${MediaQueries.xxl} {
       width: 66px;
