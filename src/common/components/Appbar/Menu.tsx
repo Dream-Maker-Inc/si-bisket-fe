@@ -20,7 +20,7 @@ export const Menu = () => (
         Editorial
       </Typography>
     </Link>
-    <Link href='/'>
+    <Link href='/search'>
       <Typography variant='subtitle2' css={style.menu}>
         Search
       </Typography>
