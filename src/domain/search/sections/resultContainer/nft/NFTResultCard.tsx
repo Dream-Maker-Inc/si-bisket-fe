@@ -1,5 +1,4 @@
 import { Stack, Typography } from '@mui/material'
-import { CardProfile } from '@/common/components/CardProfile'
 import { css } from '@emotion/react'
 
 export const NFTResultCard = () => {
@@ -10,8 +9,24 @@ export const NFTResultCard = () => {
           <div css={style.image} />
         </div>
         <Stack pl={3}>
-          <CardProfile avatar='/main/profile.png' text='@ARTISTDA' />
-          <Typography variant='subtitle1' fontWeight='bold' mt={0.25} mb={2.25}>
+          <Stack direction='row' css={style.profileRoot}>
+            <img src='/main/profile.png' alt='' width={30} height={30} />
+            <Typography
+              variant='subtitle2'
+              ml={1}
+              fontWeight='bold'
+              component='span'
+            >
+              @ARTISTDA
+            </Typography>
+          </Stack>
+          <Typography
+            variant='subtitle1'
+            fontWeight='bold'
+            mt={0.25}
+            mb={2.25}
+            component='span'
+          >
             The title of artwork of butterfly of butterfly angel…
           </Typography>
         </Stack>
@@ -47,5 +62,8 @@ const style = {
     border-top-right-radius: 10px;
     background-position: center;
     background-image: url('/main/curated-list-thumbnail.png');
+  `,
+  profileRoot: css`
+    margin: 18px 0 21px;
   `,
 }

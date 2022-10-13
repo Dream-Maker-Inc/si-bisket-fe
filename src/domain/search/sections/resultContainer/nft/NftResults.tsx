@@ -9,10 +9,14 @@ type NftResultsProps = {
 export const NftResults = ({ data }: NftResultsProps) => {
   switch (data) {
     case 'no':
-      return <Typography css={style.errorText}>Nothing found</Typography>
+      return (
+        <Typography css={style.errorText} component='span'>
+          Nothing found
+        </Typography>
+      )
     case 'err':
       return (
-        <Typography css={style.errorText}>
+        <Typography css={style.errorText} component='span'>
           {'Oops, Something went wrong.\nPlease, try again.'}
         </Typography>
       )
