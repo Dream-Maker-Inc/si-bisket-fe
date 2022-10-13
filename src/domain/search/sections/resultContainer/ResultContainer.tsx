@@ -1,7 +1,6 @@
 import * as React from 'react'
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
-import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import { css } from '@emotion/react'
 import { NftResults } from '@/domain/search/sections/resultContainer/nft/NftResults'
@@ -67,7 +66,9 @@ const style = {
     margin: 0 auto;
   `,
   tab: css`
-    width: 100%;
+    padding: 7px 0;
+    align-items: flex-start;
+    min-width: 50%;
     text-transform: none;
     font-weight: bold;
     font-size: 24px;
