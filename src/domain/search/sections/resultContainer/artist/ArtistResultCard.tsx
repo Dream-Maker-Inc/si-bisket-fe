@@ -1,6 +1,7 @@
 import { Button, Divider, Stack, Typography } from '@mui/material'
 import { css } from '@emotion/react'
 import { ArtistResultCardProfile } from '@/domain/search/sections/resultContainer/artist/ArtistResultCardProfile'
+import { MediaQueries } from '@/common/themes/Limit'
 
 export const ArtistResultCard = () => {
   return (
@@ -43,7 +44,11 @@ export const ArtistResultCard = () => {
 
         <Divider sx={{ marginTop: '10px' }} />
 
-        <Stack direction='row' justifyContent='space-between'>
+        <Stack
+          css={style.cardImages}
+          direction='row'
+          justifyContent='space-between'
+        >
           <img src='/main/curated-list-thumbnail.png' css={style.image} />
           <img src='/main/curated-list-thumbnail.png' css={style.image} />
           <img src='/main/curated-list-thumbnail.png' css={style.image} />
@@ -55,11 +60,17 @@ export const ArtistResultCard = () => {
 
 const style = {
   card: css`
+    width: 100%;
+    max-width: 348px;
     padding: 32px;
     background-color: white;
     border-radius: 10px;
     border: solid 1px #ddd;
     cursor: pointer;
+
+    @media ${MediaQueries.xxl} {
+      width: 416px;
+    }
   `,
   container: css`
     padding: 0;
@@ -74,9 +85,19 @@ const style = {
     border-radius: 30px;
     font-weight: bold;
   `,
+  cardImages: css`
+    @media ${MediaQueries.xl} {
+      gap: 24px;
+    }
+  `,
   image: css`
     width: 80px;
     height: 80px;
     margin-top: 10px;
+
+    @media ${MediaQueries.xl} {
+      width: 80px;
+      height: 80px;
+    }
   `,
 }

@@ -1,6 +1,7 @@
 import { Typography } from '@mui/material'
 import { css } from '@emotion/react'
 import { ArtistResultCard } from '@/domain/search/sections/resultContainer/artist/ArtistResultCard'
+import { MediaQueries } from '@/common/themes/Limit'
 
 type ArtistResultsProps = {
   data: 'no' | 'err' | 'yes'
@@ -40,9 +41,27 @@ const style = {
   grid: css`
     width: 100%;
     display: grid;
+    align-items: center;
+    justify-content: center;
     grid-template-columns: repeat(3, 1fr);
-    gap: 80px;
-    margin-top: 100px;
-    margin-bottom: 300px;
+    column-gap: 80px;
+    row-gap: 60px;
+    margin: 100px auto 300px;
+
+    @media ${MediaQueries.xxl} {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 16px;
+      row-gap: 60px;
+    }
+
+    @media ${MediaQueries.xl} {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 16px;
+      row-gap: 36px;
+    }
+
+    & > div {
+      width: 100%;
+    }
   `,
 }

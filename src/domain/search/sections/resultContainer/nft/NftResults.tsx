@@ -1,6 +1,7 @@
 import { Typography } from '@mui/material'
 import { css } from '@emotion/react'
 import { NFTResultCard } from '@/domain/search/sections/resultContainer/nft/NFTResultCard'
+import { MediaQueries } from '@/common/themes/Limit'
 
 type NftResultsProps = {
   data: 'no' | 'err' | 'yes'
@@ -47,8 +48,20 @@ const style = {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
+    column-gap: 50px;
+    row-gap: 60px;
     margin-top: 100px;
     margin-bottom: 300px;
+
+    @media ${MediaQueries.xxl} {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 32px;
+      row-gap: 60px;
+    }
+
+    @media ${MediaQueries.xl} {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
   `,
 }

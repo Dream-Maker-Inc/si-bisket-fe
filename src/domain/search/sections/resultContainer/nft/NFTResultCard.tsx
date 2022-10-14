@@ -1,5 +1,6 @@
 import { Stack, Typography } from '@mui/material'
 import { css } from '@emotion/react'
+import { MediaQueries } from '@/common/themes/Limit'
 
 export const NFTResultCard = () => {
   return (
@@ -26,8 +27,9 @@ export const NFTResultCard = () => {
             mt={0.25}
             mb={2.25}
             component='span'
+            fontSize='20px'
           >
-            The title of artwork of butterfly of butterfly angel…
+            The title of artwork
           </Typography>
         </Stack>
       </Stack>
@@ -53,15 +55,23 @@ const style = {
     position: relative;
     width: 310px;
     height: 316px;
+
+    @media ${MediaQueries.xxl} {
+      width: 100%;
+    }
   `,
   image: css`
     position: absolute;
     width: 310px;
-    height: 316px;
+    height: 310px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background-position: center;
     background-image: url('/main/curated-list-thumbnail.png');
+
+    @media ${MediaQueries.xxl} {
+      width: 100%;
+    }
   `,
   profileRoot: css`
     margin: 18px 0 21px;

@@ -5,6 +5,7 @@ import Box from '@mui/material/Box'
 import { css } from '@emotion/react'
 import { NftResults } from '@/domain/search/sections/resultContainer/nft/NftResults'
 import { ArtistResults } from '@/domain/search/sections/resultContainer/artist/ArtistResults'
+import { MediaQueries } from '@/common/themes/Limit'
 
 interface TabPanelProps {
   children?: React.ReactNode
@@ -63,7 +64,11 @@ const style = {
   root: css`
     width: 100%;
     max-width: 1396px;
-    margin: 0 auto;
+    margin: 80px auto;
+
+    @media ${MediaQueries.xxl} {
+      margin-top: 47px;
+    }
   `,
   tab: css`
     padding: 7px 0;
