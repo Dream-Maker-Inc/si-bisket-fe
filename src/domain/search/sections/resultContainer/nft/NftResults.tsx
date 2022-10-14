@@ -63,5 +63,11 @@ const style = {
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
     }
+
+    @media ${MediaQueries.md} {
+      margin-top: 60px;
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
   `,
 }

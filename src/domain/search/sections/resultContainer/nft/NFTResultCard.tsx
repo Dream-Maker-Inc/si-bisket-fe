@@ -59,6 +59,10 @@ const style = {
     @media ${MediaQueries.xxl} {
       width: 100%;
     }
+
+    @media ${MediaQueries.md} {
+      height: 632px;
+    }
   `,
   image: css`
     position: absolute;
@@ -72,8 +76,16 @@ const style = {
     @media ${MediaQueries.xxl} {
       width: 100%;
     }
+
+    @media ${MediaQueries.md} {
+      height: 632px;
+    }
   `,
   profileRoot: css`
     margin: 18px 0 21px;
+
+    @media ${MediaQueries.md} {
+      margin-bottom: 10px;
+    }
   `,
 }

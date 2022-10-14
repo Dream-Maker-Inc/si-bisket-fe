@@ -94,6 +94,10 @@ const style = {
     @media ${MediaQueries.xxl} {
       padding: 0 104px;
     }
+
+    @media ${MediaQueries.md} {
+      padding: 0 24px;
+    }
   `,
   tabletSearchContainer: css`
     align-items: center;

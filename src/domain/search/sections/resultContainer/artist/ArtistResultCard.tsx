@@ -61,7 +61,8 @@ export const ArtistResultCard = () => {
 const style = {
   card: css`
     width: 100%;
-    max-width: 348px;
+    max-width: 416px;
+    margin: 0 auto;
     padding: 32px;
     background-color: white;
     border-radius: 10px;
@@ -70,6 +71,10 @@ const style = {
 
     @media ${MediaQueries.xxl} {
       width: 416px;
+    }
+
+    @media ${MediaQueries.md} {
+      width: 100%;
     }
   `,
   container: css`

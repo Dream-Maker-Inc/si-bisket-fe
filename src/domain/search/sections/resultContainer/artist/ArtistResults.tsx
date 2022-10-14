@@ -60,6 +60,12 @@ const style = {
       row-gap: 36px;
     }
 
+    @media ${MediaQueries.md} {
+      grid-template-columns: 1fr;
+      row-gap: 36px;
+      margin-top: 68px;
+    }
+
     & > div {
       width: 100%;
     }
