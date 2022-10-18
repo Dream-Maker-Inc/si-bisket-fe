@@ -72,6 +72,8 @@ const style = {
     border-top-right-radius: 10px;
     background-position: center;
     background-image: url('/main/curated-list-thumbnail.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 
     @media ${MediaQueries.xxl} {
       width: 100%;
