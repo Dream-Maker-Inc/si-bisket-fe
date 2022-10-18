@@ -65,6 +65,7 @@ const style = {
     width: 100%;
     max-width: 1396px;
     margin: 80px auto;
+    overflow: hidden;
 
     @media ${MediaQueries.xxl} {
       margin-top: 47px;
