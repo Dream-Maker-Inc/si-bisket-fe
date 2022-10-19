@@ -28,8 +28,10 @@ export const NFTResultCard = () => {
             mb={2.25}
             component='span'
             fontSize='20px'
+            css={style.cardTitle}
           >
-            The title of artwork
+            The title of artwork The title of artwork The title of artwork The
+            title of artwork
           </Typography>
         </Stack>
       </Stack>
@@ -88,6 +90,17 @@ const style = {
 
     @media ${MediaQueries.md} {
       margin-bottom: 10px;
+    }
+  `,
+  cardTitle: css`
+    display: block;
+    width: 270px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    @media ${MediaQueries.md} {
+      width: 500px;
     }
   `,
 }
