@@ -101,6 +101,8 @@ const style = {
     max-width: 1280px;
     padding: 0 102px;
     margin: 0 auto;
+
+    margin-bottom: 125px;
   `,
   captionWrapper: css`
     display: flex;
