@@ -10,10 +10,14 @@ type ChipProps = {
 export const Chip = ({ iconSrc, text, count }: ChipProps) => {
   return (
     <div css={style.chip}>
-      <img src={iconSrc} alt='icon' />
+      <img src={iconSrc} alt='icon' css={style.icon} />
       <div css={style.chipTextWrapper}>
-        <Typography fontWeight={600}>{text}</Typography>
-        <Typography fontWeight={600}>{count}</Typography>
+        <Typography fontWeight={600} variant='caption'>
+          {text}
+        </Typography>
+        <Typography fontWeight={600} variant='caption'>
+          {count}
+        </Typography>
       </div>
     </div>
   )
@@ -27,9 +31,13 @@ const style = {
     align-items: center;
     gap: 4px;
   `,
+  icon: css`
+    width: 18px;
+    aspect-ratio: 1;
+  `,
   chipTextWrapper: css`
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
   `,
 }
