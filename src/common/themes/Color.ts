@@ -13,6 +13,8 @@ export enum Colors {
   AppbarBg = '#2f2f37',
 
   BannerBg = '#f2f2f2',
+
+  DarkGrey = '#505050',
 }
 
 // 테마에 적용될 컬러 팔레트를 정의 합니다.
