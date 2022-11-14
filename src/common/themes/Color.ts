@@ -15,6 +15,9 @@ export enum Colors {
   BannerBg = '#f2f2f2',
 
   DarkGrey = '#505050',
+  LightGray = '#DDDDDD',
+
+  HeightlightGreen = '#00ff9d',
 }
 
 // 테마에 적용될 컬러 팔레트를 정의 합니다.
