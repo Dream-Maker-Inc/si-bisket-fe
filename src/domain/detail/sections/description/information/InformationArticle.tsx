@@ -31,10 +31,7 @@ export const InformationArticle = () => {
 const style = {
   root: css`
     width: 100%;
-    max-width: 1280px;
-    padding: 0 102px;
-    margin: 0 auto;
-
+    max-width: 530px;
     display: flex;
     flex-direction: column;
     gap: 48px;
