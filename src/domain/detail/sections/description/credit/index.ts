@@ -1,0 +1,1 @@
+export { CreditArticle } from './CreditArticle'
