@@ -2,6 +2,7 @@ import { Colors } from '@/common/themes/Color'
 import { css } from '@emotion/react'
 import { Button, Typography } from '@mui/material'
 import { Chip } from './components/chip'
+import { ShareChip } from './components/shareChip'
 
 export const IntroductionArticle = () => {
   return (
@@ -24,7 +25,7 @@ export const IntroductionArticle = () => {
         css={style.description}
         mb={3}
       >
-        {'Description'}
+        {'The Title of Artwork'}
       </Typography>
       <div css={style.chipContainer}>
         <Chip
@@ -37,7 +38,7 @@ export const IntroductionArticle = () => {
           text={'Views'}
           count={'147'}
         />
-        <Chip
+        <ShareChip
           iconSrc={'/detail/description/ic-share.svg'}
           text={'Share'}
           count={''}
@@ -98,7 +99,6 @@ export const IntroductionArticle = () => {
 const style = {
   root: css`
     width: 100%;
-    max-width: 530px;
     margin: 0 auto;
   `,
   captionWrapper: css`
@@ -113,6 +113,7 @@ const style = {
     display: flex;
     align-items: center;
     margin-bottom: 32px;
+    border-bottom: 1px solid ${Colors.ThinGrey};
   `,
 
   imageSection: css`
