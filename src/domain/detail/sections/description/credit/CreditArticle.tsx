@@ -81,7 +81,6 @@ export const CreditArticle = () => {
 const style = {
   root: css`
     width: 100%;
-    max-width: 530px;
     display: flex;
     flex-direction: column;
     gap: 20px;

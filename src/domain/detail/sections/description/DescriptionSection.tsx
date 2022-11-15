@@ -26,17 +26,17 @@ export const DescriptionSection = () => {
 const style = {
   root: css`
     width: 100%;
-    max-width: 1280px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 64px 120px;
     display: flex;
     flex-direction: column;
-    gap: 107px;
+    gap: 100px;
+    padding: 60px 0;
   `,
   row: css`
     width: 100%;
     display: flex;
-    gap: 16px;
+    gap: 7.3%;
   `,
   tagsRow: css`
     display: flex;
