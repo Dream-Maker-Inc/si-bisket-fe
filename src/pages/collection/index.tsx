@@ -1,14 +1,14 @@
 import type { NextPage } from 'next'
 import { Footer } from '@/common/components/footer'
-import { BannerSection } from '@/domain/detail/sections/banner'
-import { DescriptionSection } from '@/domain/detail/sections/description'
+import { CollectionBannerSection } from '@/domain/collection/sections/collectionBanner'
+import { GallerySection } from '@/domain/collection/sections/gallery'
 import { MoreSection } from '@/common/components/section/MoreSection'
 
 const Detail: NextPage = () => (
   <div>
     <main>
-      <BannerSection />
-      <DescriptionSection />
+      <CollectionBannerSection />
+      <GallerySection />
       <MoreSection />
     </main>
     <Footer />

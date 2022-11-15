@@ -1,0 +1,1 @@
+export { CollectionBannerSection } from './CollectionBannerSection'
