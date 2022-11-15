@@ -6,9 +6,7 @@ export enum Colors {
   Secondary = '#666666',
 
   Danger = '#E74C3C',
-
   Border = '#fff',
-
   MainContentBg = '#fff',
   AppbarBg = '#2f2f37',
 
@@ -17,8 +15,9 @@ export enum Colors {
   DarkGrey = '#505050',
   LightGray = '#DDDDDD',
 
-  HeightlightGreen = '#00ff9d',
+  ThinGrey = '#E6E6E6',
 
+  HeightlightGreen = '#00FF9D',
   MediumDarkGrey = '#767676',
 }
 
