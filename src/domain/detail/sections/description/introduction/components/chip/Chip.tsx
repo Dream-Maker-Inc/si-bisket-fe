@@ -1,3 +1,4 @@
+import { MediaQueries } from '@/common/themes/Limit'
 import { css } from '@emotion/react'
 import { Typography } from '@mui/material'
 
@@ -30,6 +31,11 @@ const style = {
     display: flex;
     align-items: center;
     gap: 4px;
+
+    @media ${MediaQueries.md} {
+      width: unset;
+      justify-content: start;
+    }
   `,
   icon: css`
     width: 18px;
@@ -39,5 +45,8 @@ const style = {
     display: flex;
     align-items: center;
     gap: 8px;
+
+    @media ${MediaQueries.md} {
+    }
   `,
 }

@@ -1,6 +1,7 @@
-import { ImageCard } from '@/common/components/ImageCard'
 import { css } from '@emotion/react'
 import { Typography } from '@mui/material'
+import Image from 'next/image'
+import { MoreImageCard } from '../../card/MoreImageCard'
 
 export const MoreSection = () => {
   return (
@@ -11,11 +12,19 @@ export const MoreSection = () => {
         </Typography>
       </div>
       <div css={style.container}>
-        <div css={style.wrapper}>
-          <ImageCard />
-          <ImageCard />
-          <ImageCard />
-          <ImageCard />
+        <div css={style.background}>
+          <div css={style.image}>
+            <Image layout='fill' src={'/more/bg-flower.png'} alt='image' />
+          </div>
+          <div css={style.opacity}></div>
+        </div>
+        <div css={style.imageContainer}>
+          <div css={style.wrapper}>
+            <MoreImageCard />
+            <MoreImageCard />
+            <MoreImageCard />
+            <MoreImageCard />
+          </div>
         </div>
       </div>
     </div>
@@ -28,25 +37,61 @@ const style = {
   `,
   title: css`
     width: 100%;
-    max-width: 1400px;
+    max-width: 1446px;
+    padding: 0 23px;
     margin: 0 auto;
     margin-bottom: 28px;
   `,
   container: css`
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: indigo;
+    height: 538px;
     margin-top: 28px;
+    position: relative;
+    overflow-y: hidden;
   `,
-  wrapper: css`
+  background: css`
+    position: absolute;
+    top: 0;
     width: 100%;
-    max-width: 1400px;
     height: 100%;
-    display: flex;
-    gap: 24px;
+    z-index: 1;
+  `,
+  image: css`
+    position: relative;
+    width: 100%;
+    height: 100%;
+    filter: blur(30px);
+  `,
+  opacity: css`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  `,
+  imageContainer: css`
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    z-index: 99;
     padding-top: 40px;
     padding-bottom: 48px;
+    margin: 0 auto;
+    overflow: scroll;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 1400px) {
+      justify-content: start;
+    }
+  `,
+  wrapper: css`
+    width: 1400px;
+    display: flex;
+    gap: 24px;
   `,
 }

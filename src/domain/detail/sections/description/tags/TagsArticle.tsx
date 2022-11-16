@@ -1,12 +1,14 @@
+import { Colors } from '@/common/themes/Color'
 import { css } from '@emotion/react'
 import { Typography } from '@mui/material'
 
 export const TagsArticle = () => {
   return (
     <div css={style.root}>
-      <Typography fontSize={'24px'} fontWeight={'bold'}>
+      <Typography fontSize={'24px'} fontWeight={'bold'} lineHeight={1}>
         Tags
       </Typography>
+      <div css={style.hr}></div>
       <div css={style.container}>
         <Tag name='#redhat' />
         <Tag name='vvid' /> <Tag name='architecture' /> <Tag name='dark' />{' '}
@@ -21,18 +23,18 @@ export const TagsArticle = () => {
 const style = {
   root: css`
     width: 100%;
-    max-width: 460px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  `,
+  hr: css`
+    width: 100%;
+    height: 1px;
+    background-color: ${Colors.ThinGrey};
+    margin: 15.5px 0;
   `,
   container: css`
     width: 100%;
   `,
   tag: css`
     padding: 13px 16px;
-    border-radius: 36px;
-    border: solid 1px black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,6 +43,10 @@ const style = {
     display: inline-block;
     margin-right: 12px;
     margin-bottom: 16px;
+    border-radius: 23px;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.06);
+    border: solid 1px ${Colors.ThinGrey};
+    background-color: white;
   `,
   tagText: css`
     font-size: 20px;

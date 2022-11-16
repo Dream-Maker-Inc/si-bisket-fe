@@ -3,7 +3,6 @@ import { Footer } from '@/common/components/footer'
 import { BannerSection } from '@/domain/detail/sections/banner'
 import { DescriptionSection } from '@/domain/detail/sections/description'
 import { MoreSection } from '@/common/components/section/MoreSection'
-import { CustomAppbar } from '@/common/components/Appbar'
 import { TransparentAppbar } from '@/common/components/TransparentAppbar'
 
 const Detail: NextPage = () => (

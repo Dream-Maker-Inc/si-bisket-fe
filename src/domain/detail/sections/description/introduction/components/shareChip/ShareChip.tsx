@@ -1,4 +1,5 @@
 import { Colors } from '@/common/themes/Color'
+import { MediaQueries } from '@/common/themes/Limit'
 import { css } from '@emotion/react'
 import { Button, Popover, Typography } from '@mui/material'
 import Image from 'next/image'
@@ -85,6 +86,13 @@ const style = {
   chip: css`
     width: 125px;
     height: 40px;
+
+    @media ${MediaQueries.md} {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      width: unset;
+    }
   `,
   button: css`
     width: fit-content;
@@ -98,6 +106,9 @@ const style = {
     justify-content: start;
     gap: 4px;
     font-weight: 300;
+    @media ${MediaQueries.md} {
+      justify-content: center;
+    }
   `,
   icon: css`
     width: 18px;

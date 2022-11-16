@@ -5,7 +5,7 @@ import { GallerySection } from '@/domain/collection/sections/gallery'
 import { MoreSection } from '@/common/components/section/MoreSection'
 import { TransparentAppbar } from '@/common/components/TransparentAppbar'
 
-const Detail: NextPage = () => (
+const Collection: NextPage = () => (
   <div>
     <TransparentAppbar />
     <main>
@@ -17,4 +17,4 @@ const Detail: NextPage = () => (
   </div>
 )
 
-export default Detail
+export default Collection

@@ -1,3 +1,4 @@
+import { MediaQueries } from '@/common/themes/Limit'
 import { css } from '@emotion/react'
 import { CreditArticle } from './credit'
 import { InformationArticle } from './information'
@@ -14,10 +15,10 @@ export const DescriptionSection = () => {
       </div>
       <div css={style.row}>
         <InformationArticle />
-        <TradingArticle />
-      </div>
-      <div css={style.tagsRow}>
-        <TagsArticle />
+        <div css={style.innerRow}>
+          <TradingArticle />
+          <TagsArticle />
+        </div>
       </div>
     </div>
   )
@@ -26,21 +27,28 @@ export const DescriptionSection = () => {
 const style = {
   root: css`
     width: 100%;
-    max-width: 1400px;
+    max-width: 1446px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 100px;
-    padding: 60px 0;
+    padding: 60px 23px;
   `,
   row: css`
     width: 100%;
     display: flex;
     gap: 7.3%;
+
+    @media ${MediaQueries.xl} {
+      flex-direction: column;
+      gap: 60px;
+    }
   `,
-  tagsRow: css`
+
+  innerRow: css`
+    width: 100%;
     display: flex;
-    justify-content: end;
-    margin-top: -80px;
+    flex-direction: column;
+    gap: 100px;
   `,
 }

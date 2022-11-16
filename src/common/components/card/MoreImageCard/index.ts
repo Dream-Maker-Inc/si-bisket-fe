@@ -1,0 +1,1 @@
+export { MoreImageCard } from './MoreImageCard'

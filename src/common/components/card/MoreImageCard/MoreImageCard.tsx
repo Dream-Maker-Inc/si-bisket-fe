@@ -2,8 +2,9 @@ import Image from 'next/image'
 import { css } from '@emotion/react'
 import { Typography } from '@mui/material'
 import { Colors } from '@/common/themes/Color'
+import { MediaQueries } from '@/common/themes/Limit'
 
-export const ImageCard = () => {
+export const MoreImageCard = () => {
   return (
     <div css={style.card}>
       <div css={style.image}>
@@ -29,14 +30,17 @@ export const ImageCard = () => {
 
 const style = {
   card: css`
-    flex: 1;
-    max-width: 330px;
-    aspect-ratio: 1/1.363;
+    width: 330px;
+    height: 450px;
     border: 1px solid transparent;
     border-radius: 10px;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.07);
+
+    @media ${MediaQueries.xl} {
+      width: 310px;
+    }
   `,
 
   image: css`

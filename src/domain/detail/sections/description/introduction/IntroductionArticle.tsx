@@ -1,4 +1,5 @@
 import { Colors } from '@/common/themes/Color'
+import { MediaQueries } from '@/common/themes/Limit'
 import { css } from '@emotion/react'
 import { Button, Typography } from '@mui/material'
 import { Chip } from './components/chip'
@@ -19,13 +20,8 @@ export const IntroductionArticle = () => {
           {'The Name of Collections'}
         </Typography>
       </div>
-      <Typography
-        fontWeight={'bold'}
-        lineHeight={1.2}
-        css={style.description}
-        mb={3}
-      >
-        {'The Title of Artwork'}
+      <Typography fontWeight={'bold'} lineHeight={1.2} css={style.description}>
+        {'The Name of Artwork'}
       </Typography>
       <div css={style.chipContainer}>
         <Chip
@@ -51,47 +47,47 @@ export const IntroductionArticle = () => {
             alt='img'
             css={style.image}
           />
-          <div css={style.box}>
-            <Typography color={Colors.DarkGrey} fontWeight={300}>
-              {'Created by '}
-              <span css={style.span}>{'@artistname'}</span>
+          <Typography color={Colors.DarkGrey} fontWeight={300}>
+            {'Created by '}
+            <span css={style.span}>{'@artistname'}</span>
+          </Typography>
+        </div>
+      </div>
+      <div css={style.buttonSection}>
+        <Button
+          variant='outlined'
+          css={style.button}
+          onClick={() => alert('click')}
+        >
+          Follow
+        </Button>
+        <div css={style.wrapper}>
+          <div css={style.center}>
+            <Typography fontWeight={'bold'} css={style.number}>
+              {'102'}
             </Typography>
-            <div css={style.wrapper}>
-              <div css={style.center}>
-                <Typography fontWeight={'bold'} css={style.number}>
-                  {'102'}
-                </Typography>
-                <Typography
-                  variant='subtitle2'
-                  color={Colors.DarkGrey}
-                  fontWeight={600}
-                >
-                  {'Following'}
-                </Typography>
-              </div>
-              <div css={style.center}>
-                <Typography fontWeight={'bold'} css={style.number}>
-                  {'102'}
-                </Typography>
-                <Typography
-                  variant='subtitle2'
-                  color={Colors.DarkGrey}
-                  fontWeight={600}
-                >
-                  {'Followers'}
-                </Typography>
-              </div>
-            </div>
+            <Typography
+              variant='subtitle2'
+              color={Colors.DarkGrey}
+              fontWeight={600}
+            >
+              {'Following'}
+            </Typography>
+          </div>
+          <div css={style.center}>
+            <Typography fontWeight={'bold'} css={style.number}>
+              {'102'}
+            </Typography>
+            <Typography
+              variant='subtitle2'
+              color={Colors.DarkGrey}
+              fontWeight={600}
+            >
+              {'Followers'}
+            </Typography>
           </div>
         </div>
       </div>
-      <Button
-        variant='outlined'
-        css={style.button}
-        onClick={() => alert('click')}
-      >
-        Follow
-      </Button>
     </div>
   )
 }
@@ -104,26 +100,46 @@ const style = {
   captionWrapper: css`
     display: flex;
     gap: 6px;
+    margin-bottom: 2px;
+
+    @media ${MediaQueries.md} {
+      margin-bottom: 4px;
+    }
   `,
 
   description: css`
     font-size: 56px;
+    margin-bottom: 32px;
+
+    @media ${MediaQueries.md} {
+      font-size: 36px;
+      margin-bottom: 28px;
+    }
   `,
   chipContainer: css`
     display: flex;
     align-items: center;
     margin-bottom: 32px;
     border-bottom: 1px solid ${Colors.ThinGrey};
+    @media ${MediaQueries.md} {
+      width: 100%;
+      justify-content: space-between;
+      padding-bottom: 8px;
+      margin-bottom: 22.5px;
+    }
   `,
 
   imageSection: css`
     display: flex;
-    gap: 56px;
-  `,
-  box: css`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    padding-left: 8px;
+    gap: 48px;
+
+    @media ${MediaQueries.md} {
+      flex-direction: column;
+      gap: 19px;
+      margin-bottom: 36px;
+    }
   `,
 
   span: css`
@@ -136,13 +152,28 @@ const style = {
   `,
   number: css`
     font-size: 24px;
+    line-height: 28px;
   `,
   image: css`
-    width: 100px;
+    width: 80px;
     aspect-ratio: 1/1;
+
+    @media ${MediaQueries.md} {
+      width: 100px;
+    }
   `,
   center: css`
     text-align: center;
+  `,
+  buttonSection: css`
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @media ${MediaQueries.md} {
+      flex-direction: column-reverse;
+      gap: 24px;
+    }
   `,
 
   button: css`
@@ -152,5 +183,9 @@ const style = {
     color: black;
     border-radius: 18px;
     margin-top: 26px;
+
+    @media ${MediaQueries.md} {
+      margin-top: unset;
+    }
   `,
 }

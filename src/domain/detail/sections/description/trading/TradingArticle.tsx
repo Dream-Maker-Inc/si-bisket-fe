@@ -1,6 +1,7 @@
+import { Colors } from '@/common/themes/Color'
 import { css } from '@emotion/react'
 import { Typography } from '@mui/material'
-import { Cards } from './components/Cards'
+import { models } from './models/trading.model'
 
 export const TradingArticle = () => {
   return (
@@ -8,7 +9,40 @@ export const TradingArticle = () => {
       <Typography css={style.title} fontWeight={600}>
         {'Trading History'}
       </Typography>
-      <Cards />
+      <div css={style.titleHr}></div>
+
+      <HistoryLine
+        sender={models[0].sender}
+        receiver={models[0].receiver}
+        date={models[0].date}
+      />
+      <div css={style.hr}></div>
+      <HistoryLine
+        sender={models[0].sender}
+        receiver={models[0].receiver}
+        date={models[0].date}
+      />
+    </div>
+  )
+}
+
+const HistoryLine = ({ sender, receiver, date }: HistoryLineProps) => {
+  return (
+    <div css={style.line}>
+      <Typography variant='subtitle2' fontWeight={600}>
+        {receiver}
+        <span css={style.span}> bought from </span>
+        {sender}
+        <span css={style.span}> for $196</span>
+      </Typography>
+
+      <Typography
+        variant='subtitle2'
+        fontWeight={600}
+        color={Colors.MediumDarkGrey}
+      >
+        {date}
+      </Typography>
     </div>
   )
 }
@@ -16,13 +50,42 @@ export const TradingArticle = () => {
 const style = {
   root: css`
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    height: fit-content;
+    padding: 24px;
+    border-radius: 10px;
+    border: solid 1px ${Colors.ThinGrey};
+    background-color: white;
   `,
 
   title: css`
     font-size: 24px;
   `,
-  container: css``,
+  titleHr: css`
+    width: 100%;
+    height: 1px;
+    background-color: ${Colors.ThinGrey};
+    margin: 15.5px 0 23.5px;
+  `,
+  hr: css`
+    width: 100%;
+    height: 1px;
+    background-color: ${Colors.ThinGrey};
+    margin: 15.5px 0;
+  `,
+  line: css`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  `,
+
+  span: css`
+    font-weight: 300;
+  `,
+}
+
+type HistoryLineProps = {
+  sender: string
+  receiver: string
+  date: string
 }
