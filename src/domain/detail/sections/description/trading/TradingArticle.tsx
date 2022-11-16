@@ -1,4 +1,5 @@
 import { Colors } from '@/common/themes/Color'
+import { MediaQueries } from '@/common/themes/Limit'
 import { css } from '@emotion/react'
 import { Typography } from '@mui/material'
 import { models } from './models/trading.model'
@@ -29,13 +30,12 @@ export const TradingArticle = () => {
 const HistoryLine = ({ sender, receiver, date }: HistoryLineProps) => {
   return (
     <div css={style.line}>
-      <Typography variant='subtitle2' fontWeight={600}>
+      <Typography variant='subtitle2' lineHeight={1.3} fontWeight={600}>
         {receiver}
         <span css={style.span}> bought from </span>
         {sender}
         <span css={style.span}> for $196</span>
       </Typography>
-
       <Typography
         variant='subtitle2'
         fontWeight={600}
@@ -55,6 +55,10 @@ const style = {
     border-radius: 10px;
     border: solid 1px ${Colors.ThinGrey};
     background-color: white;
+
+    @media ${MediaQueries.md} {
+      margin-top: 40px;
+    }
   `,
 
   title: css`
@@ -77,6 +81,12 @@ const style = {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media ${MediaQueries.md} {
+      flex-direction: column;
+      align-items: start;
+      gap: 8px;
+    }
   `,
 
   span: css`

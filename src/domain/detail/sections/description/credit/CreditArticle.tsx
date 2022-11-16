@@ -1,4 +1,5 @@
 import { Colors } from '@/common/themes/Color'
+import { MediaQueries } from '@/common/themes/Limit'
 import { css } from '@emotion/react'
 import { Button, Typography } from '@mui/material'
 
@@ -6,7 +7,7 @@ export const CreditArticle = () => {
   return (
     <div css={style.root}>
       <div css={style.box}>
-        <div css={style.title}>
+        <div>
           <Typography
             variant='subtitle2'
             color={Colors.DarkGrey}
@@ -15,39 +16,43 @@ export const CreditArticle = () => {
           >
             {'Lowest price'}
           </Typography>
-          <Typography variant='h3' fontWeight='bold' lineHeight={1}>
+          <Typography fontWeight='bold' lineHeight={1} css={style.title}>
             {'1,000,000 WON'}
           </Typography>
         </div>
         <div css={style.container}>
-          <div css={style.row}>
+          <div css={style.column}>
             <Typography
               variant='subtitle2'
               color={Colors.DarkGrey}
               fontWeight={500}
+              lineHeight={'18px'}
             >
               {'부가세 포함'}
             </Typography>
             <Typography
               variant='subtitle2'
               color={Colors.DarkGrey}
-              fontWeight={300}
-            >
-              {'Editions: 5'}
-            </Typography>
-          </div>
-          <div css={style.row}>
-            <Typography
-              variant='subtitle2'
-              color={Colors.DarkGrey}
               fontWeight={500}
+              lineHeight={'18px'}
             >
               {'국민카드, 현대카드 제외 결제 가능'}
             </Typography>
+          </div>
+          <div css={style.column}>
             <Typography
               variant='subtitle2'
               color={Colors.DarkGrey}
               fontWeight={300}
+              lineHeight={'18px'}
+            >
+              {'Editions: 5'}
+            </Typography>
+            <Typography
+              variant='subtitle2'
+              color={Colors.DarkGrey}
+              fontWeight={300}
+              lineHeight={'18px'}
             >
               {'Chain: '}
               <span css={style.span}>Polygon</span>
@@ -57,10 +62,11 @@ export const CreditArticle = () => {
         <Button
           variant='contained'
           fullWidth
+          sx={{ borderRadius: '10px' }}
           css={style.button}
           onClick={() => alert('click')}
         >
-          {'View NFT'}
+          {'Buy'}
         </Button>
       </div>
       <div css={style.ownerSection}>
@@ -95,20 +101,37 @@ const style = {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media ${MediaQueries.xl} {
+      gap: 20px;
+    }
   `,
 
-  title: css``,
+  title: css`
+    font-size: 36px;
+    @media ${MediaQueries.xl} {
+      font-size: 24px;
+    }
+  `,
+
   container: css`
     width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 6px;
-  `,
-  row: css`
-    width: 100%;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
+    @media ${MediaQueries.md} {
+      flex-direction: column;
+      gap: 4px;
+    }
+  `,
+  column: css`
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 6px;
+
+    @media ${MediaQueries.md} {
+      gap: 4px;
+    }
   `,
   span: css`
     font-weight: 500;

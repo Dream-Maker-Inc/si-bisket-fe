@@ -2,6 +2,7 @@ import { Typography } from '@mui/material'
 import { css } from '@emotion/react'
 import { Colors } from '@/common/themes/Color'
 import { models } from './models/information.model'
+import { MediaQueries } from '@/common/themes/Limit'
 
 export const InformationArticle = () => {
   return (
@@ -34,11 +35,19 @@ const style = {
     display: flex;
     flex-direction: column;
     gap: 48px;
+
+    @media ${MediaQueries.md} {
+      gap: 36px;
+    }
   `,
   wrapper: css`
     width: 439px;
     display: flex;
     flex-direction: column;
+
+    @media ${MediaQueries.md} {
+      width: 100%;
+    }
   `,
   hr: css`
     width: 100%;

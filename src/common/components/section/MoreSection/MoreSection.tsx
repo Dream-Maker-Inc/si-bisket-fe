@@ -1,3 +1,4 @@
+import { MediaQueries } from '@/common/themes/Limit'
 import { css } from '@emotion/react'
 import { Typography } from '@mui/material'
 import Image from 'next/image'
@@ -6,8 +7,8 @@ import { MoreImageCard } from '../../card/MoreImageCard'
 export const MoreSection = () => {
   return (
     <div css={style.root}>
-      <div css={style.title}>
-        <Typography variant={'h3'} fontWeight='bold'>
+      <div css={style.header}>
+        <Typography css={style.title} fontWeight='bold'>
           {'More For You'}
         </Typography>
       </div>
@@ -35,12 +36,25 @@ const style = {
   root: css`
     width: 100%;
   `,
-  title: css`
+  header: css`
     width: 100%;
     max-width: 1446px;
     padding: 0 23px;
     margin: 0 auto;
     margin-bottom: 28px;
+
+    @media ${MediaQueries.xl} {
+      margin-bottom: 24px;
+    }
+  `,
+
+  title: css`
+    font-size: 36px;
+    line-height: 34px;
+    @media ${MediaQueries.xl} {
+      font-size: 24px;
+      line-height: 28px;
+    }
   `,
   container: css`
     width: 100%;

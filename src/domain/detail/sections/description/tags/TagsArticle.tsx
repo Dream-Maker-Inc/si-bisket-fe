@@ -1,4 +1,5 @@
 import { Colors } from '@/common/themes/Color'
+import { MediaQueries } from '@/common/themes/Limit'
 import { css } from '@emotion/react'
 import { Typography } from '@mui/material'
 
@@ -47,9 +48,18 @@ const style = {
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.06);
     border: solid 1px ${Colors.ThinGrey};
     background-color: white;
+
+    @media ${MediaQueries.md} {
+      padding: 8px 16px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
   `,
   tagText: css`
     font-size: 20px;
+    @media ${MediaQueries.md} {
+      font-size: 16px;
+    }
   `,
 }
 
