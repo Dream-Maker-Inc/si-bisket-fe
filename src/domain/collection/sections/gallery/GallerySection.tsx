@@ -1,11 +1,16 @@
 import { ImageCard } from '@/common/components/card/ImageCard'
 import { Colors } from '@/common/themes/Color'
 import { css } from '@emotion/react'
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import CheckIcon from '@mui/icons-material/Check'
-import { Box, FormControl, MenuItem, Select, Typography } from '@mui/material'
+import {
+  Box,
+  FormControl,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
+  Typography,
+} from '@mui/material'
 import { useState } from 'react'
-import { CustomSelect } from '@/common/components/CustomSelect'
 import { MediaQueries } from '@/common/themes/Limit'
 
 export const GallerySection = () => {
@@ -16,10 +21,14 @@ export const GallerySection = () => {
       </div>
 
       <div css={style.container}>
-        <ImageCard />
-        <ImageCard />
-        <ImageCard />
-        <ImageCard />
+        <div css={style.row}>
+          <ImageCard />
+          <ImageCard />
+        </div>
+        <div css={style.row}>
+          <ImageCard />
+          <ImageCard />
+        </div>
       </div>
     </div>
   )
@@ -34,7 +43,7 @@ const style = {
     padding-top: 68px;
     padding-bottom: 200px;
 
-    @media ${MediaQueries.xl} {
+    @media ${MediaQueries.md} {
       height: 2096px;
       padding-top: 32px;
       padding-bottom: 160px;
@@ -70,11 +79,31 @@ const style = {
     width: 100%;
     height: 100%;
     display: flex;
+    align-items: center;
+
     gap: 24px;
 
     @media ${MediaQueries.xl} {
       flex-direction: column;
+      height: fit-content;
+      gap: 28px;
+    }
+  `,
+
+  row: css`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 24px;
+
+    @media ${MediaQueries.xl} {
       align-items: center;
+      justify-content: center;
+      height: fit-content;
+    }
+
+    @media ${MediaQueries.md} {
+      flex-direction: column;
       gap: 28px;
     }
   `,
@@ -94,23 +123,33 @@ const style = {
 }
 
 const FilterSelect = () => {
-  const [value, setValue] = useState()
+  const [value, setValue] = useState('높은 가격순')
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setValue(event.target.value as string)
+  }
 
   return (
     <Box css={style.box} sx={{ width: 153 }}>
       <FormControl fullWidth>
-        <Select defaultValue={1}>
-          <MenuItem value={1}>
-            <Item text='높은 가격순' />
+        <Select
+          defaultValue={value}
+          onChange={handleChange}
+          renderValue={selected => {
+            return selected
+          }}
+        >
+          <MenuItem value={'높은 가격순'}>
+            <Item text='높은 가격순' checkedValue={value} />
           </MenuItem>
-          <MenuItem value={2}>
-            <Item text='낮은 가격순' />
+          <MenuItem value={'낮은 가격순'}>
+            <Item text='낮은 가격순' checkedValue={value} />
           </MenuItem>
-          <MenuItem value={3}>
-            <Item text='최신순' />
+          <MenuItem value={'최신순'}>
+            <Item text='최신순' checkedValue={value} />
           </MenuItem>
-          <MenuItem value={3}>
-            <Item text='오래된 순' />
+          <MenuItem value={'오래된 순'}>
+            <Item text='오래된 순' checkedValue={value} />
           </MenuItem>
         </Select>
       </FormControl>
@@ -120,12 +159,14 @@ const FilterSelect = () => {
 
 type ItemProps = {
   text: string
+  checkedValue: string
 }
-const Item = ({ text }: ItemProps) => {
+const Item = ({ text, checkedValue }: ItemProps) => {
+  const isMatched = text === checkedValue
   return (
     <div css={style.item}>
       <div css={style.check}>
-        <CheckIcon fontSize='small' />
+        {isMatched ? <CheckIcon fontSize='small' /> : null}
       </div>
       <Typography fontWeight={600} variant='subtitle2'>
         {text}
