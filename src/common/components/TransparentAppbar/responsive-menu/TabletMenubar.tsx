@@ -3,7 +3,7 @@ import { IconButton, Stack } from '@mui/material'
 import { Profile } from '@/common/components/Appbar/Profile'
 import { MenuRounded, SearchRounded } from '@mui/icons-material'
 import { css } from '@emotion/react'
-import { MenuDialog } from '@/common/components/Appbar/responsive-menu/MenuDialog'
+import { MenuDialog } from './MenuDialog'
 
 export const TabletMenubar = () => {
   const [open, setOpen] = useState(false)

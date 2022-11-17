@@ -1,6 +1,6 @@
 import React from 'react'
-import { LoggedInComponent } from '@/common/components/Appbar/account/LoggedInComponent'
-import { LogoutComponent } from '@/common/components/Appbar/account/LogoutComponent'
+import { LoggedInComponent } from './account/LoggedInComponent'
+import { LogoutComponent } from './account/LogoutComponent'
 
 type ProfileProps = {
   isLogin?: boolean

@@ -102,6 +102,7 @@ const style = {
     color: black;
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.05);
     border: solid 1px #f2f2f2;
+    background-color: white;
   `,
   profileIcon: css`
     width: 30px;
