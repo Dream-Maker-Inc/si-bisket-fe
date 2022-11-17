@@ -16,7 +16,11 @@ export const IntroductionArticle = () => {
         >
           {'Collection'}
         </Typography>
-        <Typography variant='subtitle2' color={Colors.DarkGrey}>
+        <Typography
+          variant='subtitle2'
+          color={Colors.DarkGrey}
+          fontStyle='italic'
+        >
           {'The Name of Collections'}
         </Typography>
       </div>
@@ -70,6 +74,7 @@ export const IntroductionArticle = () => {
               variant='subtitle2'
               color={Colors.DarkGrey}
               fontWeight={600}
+              lineHeight={1.13}
             >
               {'Following'}
             </Typography>
@@ -82,6 +87,7 @@ export const IntroductionArticle = () => {
               variant='subtitle2'
               color={Colors.DarkGrey}
               fontWeight={600}
+              lineHeight={1.13}
             >
               {'Followers'}
             </Typography>
@@ -149,6 +155,11 @@ const style = {
   wrapper: css`
     display: flex;
     gap: 28px;
+    align-self: flex-end;
+
+    @media ${MediaQueries.xl} {
+      align-self: center;
+    }
   `,
   number: css`
     font-size: 24px;
@@ -163,6 +174,10 @@ const style = {
     }
   `,
   center: css`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
     text-align: center;
   `,
   buttonSection: css`

@@ -2,6 +2,7 @@ import { Colors } from '@/common/themes/Color'
 import { MediaQueries } from '@/common/themes/Limit'
 import { css } from '@emotion/react'
 import { Button, Typography } from '@mui/material'
+import Image from 'next/image'
 
 export const CreditArticle = () => {
   return (
@@ -21,11 +22,10 @@ export const CreditArticle = () => {
           </Typography>
         </div>
         <div css={style.container}>
-          <div css={style.column}>
+          <div css={style.leftColumn}>
             <Typography
               variant='subtitle2'
               color={Colors.DarkGrey}
-              fontWeight={500}
               lineHeight={'18px'}
             >
               {'부가세 포함'}
@@ -33,30 +33,34 @@ export const CreditArticle = () => {
             <Typography
               variant='subtitle2'
               color={Colors.DarkGrey}
-              fontWeight={500}
               lineHeight={'18px'}
             >
               {'국민카드, 현대카드 제외 결제 가능'}
             </Typography>
           </div>
-          <div css={style.column}>
+          <div css={style.rightColumn}>
             <Typography
               variant='subtitle2'
               color={Colors.DarkGrey}
-              fontWeight={300}
               lineHeight={'18px'}
             >
               {'Editions: 5'}
             </Typography>
-            <Typography
-              variant='subtitle2'
-              color={Colors.DarkGrey}
-              fontWeight={300}
-              lineHeight={'18px'}
-            >
-              {'Chain: '}
-              <span css={style.span}>Polygon</span>
-            </Typography>
+            <div css={style.chain}>
+              <Typography
+                variant='subtitle2'
+                color={Colors.DarkGrey}
+                lineHeight={'18px'}
+              >
+                {'Chain: '}
+              </Typography>
+              <Image
+                width='18px'
+                height='16px'
+                src={'/detail/description/ic-poligon.png'}
+                alt=''
+              />
+            </div>
           </div>
         </div>
         <Button
@@ -101,8 +105,9 @@ const style = {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 32px;
 
-    @media ${MediaQueries.xl} {
+    @media ${MediaQueries.md} {
       gap: 20px;
     }
   `,
@@ -123,13 +128,29 @@ const style = {
       gap: 4px;
     }
   `,
-  column: css`
+  leftColumn: css`
+    margin-left: 30px;
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 6px;
 
     @media ${MediaQueries.md} {
+      margin-left: 0px;
+      gap: 4px;
+    }
+  `,
+  rightColumn: css`
+    width: 152px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 6px;
+
+    @media ${MediaQueries.md} {
+      width: unset;
+      margin-right: 0px;
       gap: 4px;
     }
   `,
@@ -169,5 +190,10 @@ const style = {
     background-color: ${Colors.HeightlightGreen};
     border: 1px solid ${Colors.HeightlightGreen};
     border-radius: 24px;
+  `,
+  chain: css`
+    display: flex;
+    align-items: center;
+    gap: 6px;
   `,
 }

@@ -94,6 +94,7 @@ const style = {
     padding-bottom: 48px;
     margin: 0 auto;
     overflow: scroll;
+    scroll-snap-type: x mandatory;
 
     display: flex;
     align-items: center;

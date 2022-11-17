@@ -12,7 +12,12 @@ export const InformationArticle = () => {
           {models.description.title}
         </Typography>
         <div css={style.hr}></div>
-        <Typography variant='subtitle2' fontWeight={300} lineHeight={1.63}>
+        <Typography
+          variant='subtitle2'
+          fontWeight={300}
+          lineHeight={1.63}
+          css={style.desc}
+        >
           {models.description.text}
         </Typography>
       </div>
@@ -21,7 +26,12 @@ export const InformationArticle = () => {
           {models.about.title}
         </Typography>
         <div css={style.hr}></div>
-        <Typography variant='subtitle2' fontWeight={300} lineHeight={1.63}>
+        <Typography
+          variant='subtitle2'
+          fontWeight={300}
+          lineHeight={1.63}
+          css={style.desc}
+        >
           {models.about.text}
         </Typography>
       </div>
@@ -41,13 +51,9 @@ const style = {
     }
   `,
   wrapper: css`
-    width: 439px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-
-    @media ${MediaQueries.xl} {
-      width: 100%;
-    }
   `,
   hr: css`
     width: 100%;
@@ -58,5 +64,13 @@ const style = {
 
   title: css`
     font-size: 24px;
+  `,
+  desc: css`
+    width: 448px;
+    word-break: break-all;
+
+    @media ${MediaQueries.xl} {
+      width: 100%;
+    }
   `,
 }

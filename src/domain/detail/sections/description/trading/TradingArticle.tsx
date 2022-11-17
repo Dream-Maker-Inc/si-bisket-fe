@@ -7,7 +7,7 @@ import { models } from './models/trading.model'
 export const TradingArticle = () => {
   return (
     <div css={style.root}>
-      <Typography css={style.title} fontWeight={600}>
+      <Typography css={style.title} fontWeight='bold'>
         {'Trading History'}
       </Typography>
       <div css={style.titleHr}></div>

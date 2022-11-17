@@ -115,6 +115,8 @@ const style = {
     @media ${MediaQueries.md} {
       font-size: 16px;
       line-height: 24px;
+      width: 100%;
+      text-align: auto;
     }
   `,
   chip: css`

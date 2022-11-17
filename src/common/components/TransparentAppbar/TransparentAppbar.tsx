@@ -13,6 +13,7 @@ import { useState } from 'react'
 import { Login } from './Login'
 import { TabletMenubar } from './responsive-menu'
 import { Menu } from './Menu'
+import { useAppbar } from './hooks/useAppbar'
 
 export interface CustomAppbarProps {
   appbarProps?: AppBarProps
@@ -60,10 +61,11 @@ export const TransparentAppbar = ({
   toolbarProps,
 }: CustomAppbarProps) => {
   const { isWebNormal } = useCustomMediaQuery()
+  const { isScrollMoved } = useAppbar()
 
   return (
-    <AppBar position='fixed' {...appbarProps} css={style.root}>
-      <Toolbar {...toolbarProps} css={style.toolbar}>
+    <AppBar position='fixed' {...appbarProps} css={style.root(isScrollMoved)}>
+      <Toolbar {...toolbarProps} css={style.toolbar(isScrollMoved)}>
         <Stack css={style.wrapper}>
           <Link href='/'>
             <img
@@ -85,14 +87,16 @@ export const TransparentAppbar = ({
 }
 
 const style = {
-  root: css`
-    background-color: transparent;
+  root: (isScrollMoved: boolean) => css`
+    background-color: ${isScrollMoved ? 'white' : 'transparent'};
   `,
-  toolbar: css`
+  toolbar: (isScrollMoved: boolean) => css`
     width: 100%;
     height: 80px;
     justify-content: space-between;
-    background-color: transparent;
+    background-color: ${isScrollMoved ? 'white' : 'transparent'};
+    border-bottom: ${isScrollMoved ? '1px solid #f2f2f2' : 'none'};
+    transition: 0.3s;
   `,
   wrapper: css`
     flex-direction: row;
