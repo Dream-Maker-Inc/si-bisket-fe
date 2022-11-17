@@ -16,7 +16,13 @@ export const CollectionBannerSection = () => {
   return (
     <div css={style.root}>
       <div css={style.image}>
-        <Image layout='fill' src={'/main/column-image.jpg'} alt='img' />
+        <Image
+          layout='fill'
+          objectFit='cover'
+          objectPosition='center'
+          src={'/main/column-image.jpg'}
+          alt='img'
+        />
         <div css={style.opacity}></div>
         <div css={style.text}>
           <Image
