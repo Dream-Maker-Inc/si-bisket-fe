@@ -45,7 +45,7 @@ const style = {
     display: flex;
     flex-direction: column;
 
-    @media ${MediaQueries.md} {
+    @media ${MediaQueries.xl} {
       width: 100%;
     }
   `,
