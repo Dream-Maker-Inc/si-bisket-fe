@@ -15,6 +15,9 @@ export const SearchBar = () => {
   const handleSearchTextChange = (v: string) => {
     setSearchText(v)
   }
+  const resetSearchText = () => {
+    setSearchText('')
+  }
   return (
     <AppBar position='fixed' css={style.root}>
       <Toolbar css={style.toolbar}>
@@ -32,7 +35,7 @@ export const SearchBar = () => {
             ),
           }}
         />
-        <IconButton>
+        <IconButton sx={{ padding: '0px' }} onClick={resetSearchText}>
           <Image
             width='70px'
             height='70px'
