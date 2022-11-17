@@ -8,12 +8,11 @@ import {
 } from '@mui/material'
 import { css } from '@emotion/react'
 import Link from 'next/link'
-import { Menu } from '@/common/components/Appbar/Menu'
-import { Profile } from '@/common/components/Appbar/Profile'
 import { useCustomMediaQuery } from '@/common/themes/UseCustomMediaQuery'
-import { TabletMenubar } from '@/common/components/Appbar/responsive-menu/TabletMenubar'
 import { useState } from 'react'
 import { Login } from './Login'
+import { TabletMenubar } from './responsive-menu'
+import { Menu } from './Menu'
 
 export interface CustomAppbarProps {
   appbarProps?: AppBarProps
