@@ -104,8 +104,9 @@ const style = {
     }
   `,
   wrapper: css`
-    width: 1400px;
+    width: 1446px;
     display: flex;
     gap: 24px;
+    padding: 0 23px;
   `,
 }
