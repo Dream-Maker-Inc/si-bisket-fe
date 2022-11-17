@@ -1,17 +1,7 @@
 import { ImageCard } from '@/common/components/card/ImageCard'
-import { Colors } from '@/common/themes/Color'
 import { css } from '@emotion/react'
-import CheckIcon from '@mui/icons-material/Check'
-import {
-  Box,
-  FormControl,
-  MenuItem,
-  Select,
-  SelectChangeEvent,
-  Typography,
-} from '@mui/material'
-import { useState } from 'react'
 import { MediaQueries } from '@/common/themes/Limit'
+import { FilterSelect } from './components/FilterSelect'
 
 export const GallerySection = () => {
   return (
@@ -19,7 +9,6 @@ export const GallerySection = () => {
       <div css={style.select}>
         <FilterSelect />
       </div>
-
       <div css={style.container}>
         <div css={style.row}>
           <ImageCard />
@@ -59,28 +48,12 @@ const style = {
       margin-bottom: 12px;
     }
   `,
-  box: css`
-    border-radius: 18px;
-    border: solid 1px ${Colors.BannerBg};
 
-    background-color: white;
-
-    & .MuiSelect-select {
-      min-height: unset;
-      height: unset;
-      padding: 8px 20px;
-    }
-
-    & fieldset {
-      border: none;
-    }
-  `,
   container: css`
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
-
     gap: 24px;
 
     @media ${MediaQueries.xl} {
@@ -107,70 +80,4 @@ const style = {
       gap: 28px;
     }
   `,
-  item: css`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  `,
-  check: css`
-    width: 12px;
-    height: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  `,
-}
-
-const FilterSelect = () => {
-  const [value, setValue] = useState('높은 가격순')
-
-  const handleChange = (event: SelectChangeEvent) => {
-    setValue(event.target.value as string)
-  }
-
-  return (
-    <Box css={style.box} sx={{ width: 153 }}>
-      <FormControl fullWidth>
-        <Select
-          defaultValue={value}
-          onChange={handleChange}
-          renderValue={selected => {
-            return selected
-          }}
-        >
-          <MenuItem value={'높은 가격순'}>
-            <Item text='높은 가격순' checkedValue={value} />
-          </MenuItem>
-          <MenuItem value={'낮은 가격순'}>
-            <Item text='낮은 가격순' checkedValue={value} />
-          </MenuItem>
-          <MenuItem value={'최신순'}>
-            <Item text='최신순' checkedValue={value} />
-          </MenuItem>
-          <MenuItem value={'오래된 순'}>
-            <Item text='오래된 순' checkedValue={value} />
-          </MenuItem>
-        </Select>
-      </FormControl>
-    </Box>
-  )
-}
-
-type ItemProps = {
-  text: string
-  checkedValue: string
-}
-const Item = ({ text, checkedValue }: ItemProps) => {
-  const isMatched = text === checkedValue
-  return (
-    <div css={style.item}>
-      <div css={style.check}>
-        {isMatched ? <CheckIcon fontSize='small' /> : null}
-      </div>
-      <Typography fontWeight={600} variant='subtitle2'>
-        {text}
-      </Typography>
-    </div>
-  )
 }
