@@ -33,9 +33,6 @@ const style = {
     flex-direction: column;
     gap: 100px;
     padding: 60px 23px 300px 23px;
-    @media ${MediaQueries.xl} {
-      padding: 60px 23px 230px 23px;
-    }
 
     @media ${MediaQueries.md} {
       padding: 60px 23px 160px 23px;
