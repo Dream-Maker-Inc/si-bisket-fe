@@ -11,7 +11,7 @@ const Collection: NextPage = () => {
   const { isWebNormal } = useCustomMediaQuery()
   return (
     <div>
-      {isWebNormal ? <SearchBar /> : <TransparentAppbar />}
+      {isWebNormal ? <SearchBar /> : <TransparentAppbar isWhite={true} />}
 
       <main>
         <CollectionBannerSection />

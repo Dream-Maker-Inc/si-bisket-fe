@@ -18,35 +18,55 @@ import { useAppbar } from './hooks/useAppbar'
 export interface CustomAppbarProps {
   appbarProps?: AppBarProps
   toolbarProps?: ToolbarProps
+  isWhite: boolean
 }
 
-const WebMenubar = () => {
+interface WebMenubarProps {
+  isWhite: boolean
+  isScrollMoved?: boolean
+}
+
+const WebMenubar = ({ isWhite = false }: WebMenubarProps) => {
   const [language, setLanguage] = useState('kor')
   const changeLanguageToKOR = () => setLanguage('kor')
   const changeLanguageToENG = () => setLanguage('eng')
+  const { isScrollMoved } = useAppbar()
+
+  const onColorChanged = isWhite && !isScrollMoved ? true : false
 
   return (
     <Stack direction='row' alignItems='center' gap={4}>
-      <Menu />
-      <Login />
+      <Menu onColorChanged={onColorChanged} />
+      <Login onColorChanged={onColorChanged} />
       <Stack direction='row' alignItems='center'>
         <div css={style.languageWrapper}>
           <Typography
             onClick={changeLanguageToENG}
             variant='subtitle2'
-            css={language === 'eng' ? style.language : style.languageActive}
+            css={
+              language === 'eng'
+                ? style.language(onColorChanged)
+                : style.languageActive(onColorChanged)
+            }
           >
             ENG
           </Typography>
         </div>
-        <Typography variant='subtitle2' css={style.languageDivider}>
+        <Typography
+          variant='subtitle2'
+          css={style.languageDivider(onColorChanged)}
+        >
           |
         </Typography>
         <div css={style.languageWrapper}>
           <Typography
             onClick={changeLanguageToKOR}
             variant='subtitle2'
-            css={language === 'kor' ? style.language : style.languageActive}
+            css={
+              language === 'kor'
+                ? style.language(onColorChanged)
+                : style.languageActive(onColorChanged)
+            }
           >
             KOR
           </Typography>
@@ -59,6 +79,7 @@ const WebMenubar = () => {
 export const TransparentAppbar = ({
   appbarProps,
   toolbarProps,
+  isWhite = false,
 }: CustomAppbarProps) => {
   const { isWebNormal } = useCustomMediaQuery()
   const { isScrollMoved } = useAppbar()
@@ -68,18 +89,30 @@ export const TransparentAppbar = ({
       <Toolbar {...toolbarProps} css={style.toolbar(isScrollMoved)}>
         <Stack css={style.wrapper}>
           <Link href='/'>
-            <img
-              src='/logo.svg'
-              alt=''
-              style={{
-                width: '126.3px',
-                height: '23.6px',
-                cursor: 'pointer',
-              }}
-            />
+            {isWhite && !isScrollMoved ? (
+              <img
+                src='/logo-white.svg'
+                alt=''
+                style={{
+                  width: '126.3px',
+                  height: '23.6px',
+                  cursor: 'pointer',
+                }}
+              />
+            ) : (
+              <img
+                src='/logo.svg'
+                alt=''
+                style={{
+                  width: '126.3px',
+                  height: '23.6px',
+                  cursor: 'pointer',
+                }}
+              />
+            )}
           </Link>
 
-          {isWebNormal ? <TabletMenubar /> : <WebMenubar />}
+          {isWebNormal ? <TabletMenubar /> : <WebMenubar isWhite={isWhite} />}
         </Stack>
       </Toolbar>
     </AppBar>
@@ -117,18 +150,18 @@ const style = {
       transition: 0.5s;
     }
   `,
-  language: css`
-    color: black;
+  language: (onColorChanged: boolean) => css`
+    color: ${onColorChanged ? 'white' : 'black'};
     font-weight: 500;
     cursor: pointer;
   `,
-  languageDivider: css`
-    color: #999;
+  languageDivider: (onColorChanged: boolean) => css`
+    color: ${onColorChanged ? '#767676' : '#999'};
     font-weight: 500;
     margin: 0 4px;
   `,
-  languageActive: css`
-    color: rgba(17, 17, 17, 0.3019607843);
+  languageActive: (onColorChanged: boolean) => css`
+    color: ${onColorChanged ? '#767676' : 'rgba(17, 17, 17, 0.301960784)'};
     font-weight: 500;
     cursor: pointer;
   `,

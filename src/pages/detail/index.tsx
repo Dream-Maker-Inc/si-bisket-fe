@@ -7,7 +7,7 @@ import { TransparentAppbar } from '@/common/components/TransparentAppbar'
 
 const Detail: NextPage = () => (
   <div>
-    <TransparentAppbar />
+    <TransparentAppbar isWhite={false} />
     <main>
       <BannerSection />
       <DescriptionSection />
