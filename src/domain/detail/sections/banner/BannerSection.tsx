@@ -17,18 +17,15 @@ export const BannerSection = () => {
 const style = {
   root: css`
     width: 100%;
-    height: 870px;
+    padding: 186px 23px 106px 23px;
+
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: ${Colors.BannerBg};
 
     @media ${MediaQueries.md} {
-      height: 560px;
-    }
-
-    @media ${MediaQueries.xs} {
-      height: 400px;
+      padding: 126px 23px 46px 23px;
     }
   `,
   imageContainer: css`
@@ -37,7 +34,7 @@ const style = {
     position: relative;
 
     @media ${MediaQueries.xl} {
-      width: 92%;
+      width: 100%;
       height: unset;
       aspect-ratio: 1/0.727;
     }

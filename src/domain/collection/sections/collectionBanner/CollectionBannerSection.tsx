@@ -6,8 +6,8 @@ import Image from 'next/image'
 
 export const CollectionBannerSection = () => {
   const models = {
-    title: 'the name of\ncollections',
-    mobileTitle: 'the name of collections',
+    title: 'The Name Of\nCollections',
+    mobileTitle: 'The Name Of Collections',
     caption: 'Collection Subtitle',
     desc: 'NFT (Non-Fungible Token) 는 신개념 블록체인 기술을 활용하여 발행하는 대체 불가능 토큰입니다.\nNFT를 통해 위·변조가 쉬운 각종 무형자산 (디지털아트, 영상, 음악, 서류) 이 원본임을 증명 할 수 있습니다.  NFT (Non-\nFungible Token) 는 신개념 블록체인 기술을 활용하여 발행하는 대체 불가능 토큰입니다.\nNFT를 통해 위·변조가 쉬운 각종 무형자산 (디지털아트, 영상, 음악, 서류) 이 원본임을 증명 할 수 있습니다.',
   }
@@ -78,6 +78,7 @@ const style = {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: 20px;
   `,
   opacity: css`
     position: absolute;
