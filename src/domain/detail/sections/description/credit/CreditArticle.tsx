@@ -129,24 +129,25 @@ const style = {
     }
   `,
   leftColumn: css`
-    margin-left: 30px;
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 6px;
 
-    @media ${MediaQueries.md} {
-      margin-left: 0px;
+    @media ${MediaQueries.xl} {
       gap: 4px;
     }
   `,
   rightColumn: css`
-    width: 152px;
-    margin-right: 30px;
+    width: 162px;
+    margin-right: 60px;
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 6px;
+
+    @media ${MediaQueries.xl} {
+    }
 
     @media ${MediaQueries.md} {
       width: unset;
