@@ -27,14 +27,19 @@ export const DescriptionSection = () => {
 const style = {
   root: css`
     width: 100%;
-    max-width: 1446px;
+    max-width: 1392px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 100px;
-    padding: 60px 23px 300px 23px;
+    padding: 60px 99px 300px 99px;
 
-    @media ${MediaQueries.md} {
+    @media ${MediaQueries.xl} {
+      max-width: 824px;
+      padding: 79px 23px 115px 23px;
+    }
+
+    @media ${MediaQueries.xs} {
       padding: 60px 23px 160px 23px;
     }
   `,
