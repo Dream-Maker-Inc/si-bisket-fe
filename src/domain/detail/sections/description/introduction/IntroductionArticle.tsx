@@ -116,7 +116,7 @@ const style = {
     gap: 6px;
     margin-bottom: 2px;
 
-    @media ${MediaQueries.md} {
+    @media ${MediaQueries.xs} {
       margin-bottom: 4px;
     }
   `,
@@ -128,7 +128,7 @@ const style = {
       font-size: 44px;
     }
 
-    @media ${MediaQueries.md} {
+    @media ${MediaQueries.xs} {
       font-size: 36px;
     }
   `,
@@ -140,7 +140,7 @@ const style = {
       font-size: 44px;
     }
 
-    @media ${MediaQueries.md} {
+    @media ${MediaQueries.xs} {
       font-size: 36px;
       margin-bottom: 28px;
     }
@@ -150,7 +150,7 @@ const style = {
     align-items: center;
     margin-bottom: 32px;
     border-bottom: 1px solid ${Colors.ThinGrey};
-    @media ${MediaQueries.md} {
+    @media ${MediaQueries.xs} {
       width: 100%;
       justify-content: space-between;
       padding-bottom: 8px;
@@ -164,7 +164,7 @@ const style = {
     padding-left: 8px;
     gap: 48px;
 
-    @media ${MediaQueries.md} {
+    @media ${MediaQueries.xs} {
       flex-direction: column;
       gap: 19px;
       margin-bottom: 36px;
@@ -192,7 +192,7 @@ const style = {
     width: 80px;
     aspect-ratio: 1/1;
 
-    @media ${MediaQueries.md} {
+    @media ${MediaQueries.xs} {
       width: 100px;
     }
   `,
@@ -208,7 +208,7 @@ const style = {
     align-items: center;
     gap: ${isFollwed ? '18px' : '40px'};
 
-    @media ${MediaQueries.md} {
+    @media ${MediaQueries.xs} {
       flex-direction: column-reverse;
       gap: 24px;
     }
@@ -229,7 +229,7 @@ const style = {
       border: 2px solid black;
     }
 
-    @media ${MediaQueries.md} {
+    @media ${MediaQueries.xs} {
       width: ${isFollwed ? '102px' : '80px'};
       height: 36px;
       margin-top: unset;

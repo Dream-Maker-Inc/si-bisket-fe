@@ -61,10 +61,6 @@ const style = {
     border-radius: 10px;
     border: solid 1px ${Colors.ThinGrey};
     background-color: white;
-
-    @media ${MediaQueries.md} {
-      margin-top: 40px;
-    }
   `,
 
   title: css`

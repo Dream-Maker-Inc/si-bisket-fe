@@ -61,7 +61,7 @@ const style = {
     border: solid 1px ${Colors.ThinGrey};
     background-color: white;
 
-    @media ${MediaQueries.md} {
+    @media ${MediaQueries.xs} {
       padding: 8px 16px;
       margin-right: 8px;
       margin-bottom: 8px;
@@ -70,7 +70,7 @@ const style = {
   tagText: css`
     font-size: 18px;
     line-height: 20px;
-    @media ${MediaQueries.md} {
+    @media ${MediaQueries.xs} {
       font-size: 16px;
     }
   `,
