@@ -107,14 +107,14 @@ const style = {
     justify-content: space-between;
     gap: 32px;
 
-    @media ${MediaQueries.md} {
+    @media ${MediaQueries.xs} {
       gap: 20px;
     }
   `,
 
   title: css`
     font-size: 36px;
-    @media ${MediaQueries.md} {
+    @media ${MediaQueries.xs} {
       font-size: 24px;
       line-height: 28px;
     }
@@ -124,7 +124,7 @@ const style = {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    @media ${MediaQueries.md} {
+    @media ${MediaQueries.xs} {
       flex-direction: column;
       gap: 4px;
     }
@@ -147,7 +147,7 @@ const style = {
     align-items: start;
     gap: 6px;
 
-    @media ${MediaQueries.md} {
+    @media ${MediaQueries.xs} {
       width: unset;
       margin-right: 0px;
       gap: 4px;
