@@ -67,8 +67,8 @@ export const CreditArticle = () => {
           variant='contained'
           fullWidth
           sx={{ borderRadius: '10px' }}
+          disabled={false}
           css={style.button}
-          onClick={() => alert('click')}
         >
           {'Buy'}
         </Button>
@@ -147,9 +147,6 @@ const style = {
     align-items: start;
     gap: 6px;
 
-    @media ${MediaQueries.xl} {
-    }
-
     @media ${MediaQueries.md} {
       width: unset;
       margin-right: 0px;
@@ -164,6 +161,10 @@ const style = {
     height: 60px;
     padding: 0px;
     font-size: 19px;
+
+    &:hover {
+      box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
+    }
   `,
 
   ownerSection: css`

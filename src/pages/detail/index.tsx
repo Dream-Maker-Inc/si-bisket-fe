@@ -4,10 +4,11 @@ import { BannerSection } from '@/domain/detail/sections/banner'
 import { DescriptionSection } from '@/domain/detail/sections/description'
 import { MoreSection } from '@/common/components/section/MoreSection'
 import { TransparentAppbar } from '@/common/components/TransparentAppbar'
+import { CustomAppbar } from '@/common/components/Appbar'
 
 const Detail: NextPage = () => (
   <div>
-    <TransparentAppbar isWhite={false} />
+    <CustomAppbar />
     <main>
       <BannerSection />
       <DescriptionSection />

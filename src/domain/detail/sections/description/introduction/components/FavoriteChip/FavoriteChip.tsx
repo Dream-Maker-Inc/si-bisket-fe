@@ -2,35 +2,23 @@ import { Colors } from '@/common/themes/Color'
 import { MediaQueries } from '@/common/themes/Limit'
 import { css } from '@emotion/react'
 import { Button, Popover, Typography } from '@mui/material'
-import Image from 'next/image'
-import { useState } from 'react'
 
-type ShareChipProps = {
+type FavoriteChipProps = {
   iconSrc: string
   hoverIconSrc: string
   text: string
   count: string
 }
 
-export const ShareChip = ({
+export const FavoriteChip = ({
   iconSrc,
   hoverIconSrc,
   text,
   count,
-}: ShareChipProps) => {
-  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null)
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget)
-  }
-  const handleClose = () => {
-    setAnchorEl(null)
-  }
-
-  const open = Boolean(anchorEl)
-  const id = open ? 'simple-popover' : undefined
+}: FavoriteChipProps) => {
   return (
     <div css={style.chip}>
-      <Button css={style.button} onClick={handleClick}>
+      <Button css={style.button}>
         <img className='ic-share' src={iconSrc} alt='icon' css={style.icon} />
         <img
           className='ic-share-hover'
@@ -38,55 +26,21 @@ export const ShareChip = ({
           alt='icon'
           css={style.icon}
         />
+
         <div css={style.chipTextWrapper}>
-          <Typography fontWeight={600} variant='caption' css={style.text}>
+          <Typography
+            className='text'
+            fontWeight={600}
+            variant='caption'
+            css={style.text}
+          >
             {text}
-          </Typography>
-          <Typography fontWeight={600} variant='caption'>
-            {count}
           </Typography>
         </div>
       </Button>
-      <Popover
-        id={id}
-        open={open}
-        anchorEl={anchorEl}
-        onClose={handleClose}
-        anchorOrigin={{
-          vertical: 'center',
-          horizontal: 'right',
-        }}
-        transformOrigin={{
-          vertical: 'center',
-          horizontal: 'left',
-        }}
-        css={style.popover}
-      >
-        <div css={style.inner}>
-          <div css={style.row}>
-            <div css={style.asset}>
-              <Image
-                width='17px'
-                height='9px'
-                src={'/detail/description/ic-link.svg'}
-                alt='icon'
-              />
-            </div>
-            <Typography css={style.hover}>{'Copy Link'}</Typography>
-          </div>
-          <div css={style.row}>
-            <div css={style.asset}>
-              <Image
-                width='19px'
-                height='16px'
-                src={'/detail/description/ic-twitter.svg'}
-                alt='icon'
-              />
-            </div>
-            <Typography css={style.hover}>{'Twitter'}</Typography>
-          </div>
-        </div>
-      </Popover>
+      <Typography fontWeight={600} variant='caption'>
+        {count}
+      </Typography>
     </div>
   )
 }
@@ -98,6 +52,10 @@ const style = {
   chip: css`
     width: 125px;
     height: 40px;
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
 
     @media ${MediaQueries.md} {
       display: flex;

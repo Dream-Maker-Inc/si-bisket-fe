@@ -1,0 +1,1 @@
+export { FavoriteChip } from './FavoriteChip'

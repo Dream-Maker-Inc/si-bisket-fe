@@ -2,10 +2,16 @@ import { Colors } from '@/common/themes/Color'
 import { MediaQueries } from '@/common/themes/Limit'
 import { css } from '@emotion/react'
 import { Button, Typography } from '@mui/material'
+import { useState } from 'react'
 import { Chip } from './components/chip'
+import { FavoriteChip } from './components/FavoriteChip'
 import { ShareChip } from './components/shareChip'
 
 export const IntroductionArticle = () => {
+  const [isFollwed, setIsFollwed] = useState(false)
+  const handleSetIsFollwed = () => {
+    setIsFollwed(!isFollwed)
+  }
   return (
     <div css={style.root}>
       <div css={style.captionWrapper}>
@@ -28,8 +34,9 @@ export const IntroductionArticle = () => {
         {'The Name of Artwork'}
       </Typography>
       <div css={style.chipContainer}>
-        <Chip
+        <FavoriteChip
           iconSrc={'/detail/description/ic-heart.svg'}
+          hoverIconSrc={'/detail/description/ic-heart-hover.svg'}
           text={'Favorites'}
           count={'0'}
         />
@@ -40,6 +47,7 @@ export const IntroductionArticle = () => {
         />
         <ShareChip
           iconSrc={'/detail/description/ic-share.svg'}
+          hoverIconSrc={'/detail/description/ic-share-hover.svg'}
           text={'Share'}
           count={''}
         />
@@ -57,13 +65,13 @@ export const IntroductionArticle = () => {
           </Typography>
         </div>
       </div>
-      <div css={style.buttonSection}>
+      <div css={style.buttonSection(isFollwed)}>
         <Button
           variant='outlined'
-          css={style.button}
-          onClick={() => alert('click')}
+          css={style.button(isFollwed)}
+          onClick={handleSetIsFollwed}
         >
-          Follow
+          {isFollwed ? 'Following' : 'Follow'}
         </Button>
         <div css={style.wrapper}>
           <div css={style.center}>
@@ -195,10 +203,10 @@ const style = {
     gap: 4px;
     text-align: center;
   `,
-  buttonSection: css`
+  buttonSection: (isFollwed: boolean) => css`
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: ${isFollwed ? '18px' : '40px'};
 
     @media ${MediaQueries.md} {
       flex-direction: column-reverse;
@@ -206,16 +214,24 @@ const style = {
     }
   `,
 
-  button: css`
-    width: 96px;
+  button: (isFollwed: boolean) => css`
+    width: ${isFollwed ? '118px' : '96px'};
     height: 35px;
     font-weight: 600;
-    color: black;
+    background-color: ${isFollwed ? 'black' : 'transperent'};
+    color: ${isFollwed ? 'white' : 'black'};
     border: 1px solid black;
     border-radius: 18px;
     margin-top: 26px;
 
+    &:hover {
+      background-color: ${isFollwed ? 'black' : 'transperent'};
+      border: 2px solid black;
+    }
+
     @media ${MediaQueries.md} {
+      width: ${isFollwed ? '102px' : '80px'};
+      height: 36px;
       margin-top: unset;
     }
   `,
