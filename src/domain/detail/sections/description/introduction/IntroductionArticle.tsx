@@ -52,7 +52,7 @@ export const IntroductionArticle = () => {
             css={style.image}
           />
           <Typography color={Colors.DarkGrey} fontWeight={300}>
-            {'Created by '}
+            {'Created by  '}
             <span css={style.span}>{'@artistname'}</span>
           </Typography>
         </div>
@@ -72,7 +72,7 @@ export const IntroductionArticle = () => {
             </Typography>
             <Typography
               variant='subtitle2'
-              color={Colors.DarkGrey}
+              color={Colors.MediumDarkGrey}
               fontWeight={600}
               lineHeight={1.13}
             >
@@ -85,7 +85,7 @@ export const IntroductionArticle = () => {
             </Typography>
             <Typography
               variant='subtitle2'
-              color={Colors.DarkGrey}
+              color={Colors.MediumDarkGrey}
               fontWeight={600}
               lineHeight={1.13}
             >
@@ -112,10 +112,25 @@ const style = {
       margin-bottom: 4px;
     }
   `,
+  title: css`
+    font-size: 56px;
+    line-height: 1;
 
+    @media ${MediaQueries.xl} {
+      font-size: 44px;
+    }
+
+    @media ${MediaQueries.md} {
+      font-size: 36px;
+    }
+  `,
   description: css`
     font-size: 56px;
     margin-bottom: 32px;
+
+    @media ${MediaQueries.xl} {
+      font-size: 44px;
+    }
 
     @media ${MediaQueries.md} {
       font-size: 36px;
@@ -193,9 +208,10 @@ const style = {
 
   button: css`
     width: 96px;
-    height: 36px;
+    height: 35px;
     font-weight: 600;
     color: black;
+    border: 1px solid black;
     border-radius: 18px;
     margin-top: 26px;
 
