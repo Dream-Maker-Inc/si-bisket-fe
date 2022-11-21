@@ -1,5 +1,6 @@
 import { Colors } from '@/common/themes/Color'
 import { MediaQueries } from '@/common/themes/Limit'
+import { useCustomMediaQuery } from '@/common/themes/UseCustomMediaQuery'
 import { css } from '@emotion/react'
 import { Typography } from '@mui/material'
 import { models } from './models/trading.model'
@@ -28,9 +29,14 @@ export const TradingArticle = () => {
 }
 
 const HistoryLine = ({ sender, receiver, date }: HistoryLineProps) => {
+  const { isMobile } = useCustomMediaQuery()
   return (
     <div css={style.line}>
-      <Typography variant='subtitle2' lineHeight={1.3} fontWeight={600}>
+      <Typography
+        variant='subtitle2'
+        lineHeight={isMobile ? '24px' : '18px'}
+        fontWeight={'bold'}
+      >
         {receiver}
         <span css={style.span}> bought from </span>
         {sender}
@@ -90,7 +96,7 @@ const style = {
   `,
 
   span: css`
-    font-weight: 300;
+    font-weight: 400;
   `,
 }
 

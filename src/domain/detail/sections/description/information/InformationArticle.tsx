@@ -3,8 +3,10 @@ import { css } from '@emotion/react'
 import { Colors } from '@/common/themes/Color'
 import { models } from './models/information.model'
 import { MediaQueries } from '@/common/themes/Limit'
+import { useCustomMediaQuery } from '@/common/themes/UseCustomMediaQuery'
 
 export const InformationArticle = () => {
+  const { isMobile } = useCustomMediaQuery()
   return (
     <div css={style.root}>
       <div css={style.wrapper}>
@@ -32,7 +34,7 @@ export const InformationArticle = () => {
           lineHeight={1.63}
           css={style.desc}
         >
-          {models.about.text}
+          {isMobile ? models.about.mobileText : models.about.text}
         </Typography>
       </div>
     </div>
@@ -67,6 +69,7 @@ const style = {
   `,
   desc: css`
     width: 448px;
+    letter-spacing: -0.32px;
     word-break: break-all;
 
     @media ${MediaQueries.xl} {
