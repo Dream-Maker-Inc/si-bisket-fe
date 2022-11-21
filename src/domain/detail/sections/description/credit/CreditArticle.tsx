@@ -114,8 +114,9 @@ const style = {
 
   title: css`
     font-size: 36px;
-    @media ${MediaQueries.xl} {
+    @media ${MediaQueries.md} {
       font-size: 24px;
+      line-height: 28px;
     }
   `,
 
