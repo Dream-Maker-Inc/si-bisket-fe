@@ -19,6 +19,7 @@ export enum Colors {
 
   HeightlightGreen = '#00FF9D',
   MediumDarkGrey = '#767676',
+  BlackGrey = '#838898',
 }
 
 // 테마에 적용될 컬러 팔레트를 정의 합니다.

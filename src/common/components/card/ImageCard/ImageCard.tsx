@@ -2,7 +2,6 @@ import Image from 'next/image'
 import { css } from '@emotion/react'
 import { Typography } from '@mui/material'
 import { Colors } from '@/common/themes/Color'
-import { MediaQueries } from '@/common/themes/Limit'
 
 export const ImageCard = () => {
   return (
@@ -39,8 +38,10 @@ const style = {
     border-radius: 10px;
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.07);
 
-    @media ${MediaQueries.xl} {
-      width: 313px;
+    @media ${`(max-width:1023px)`} {
+      max-width: 446px;
+      height: fit-content;
+      aspect-ratio: unset;
     }
   `,
 
@@ -48,6 +49,10 @@ const style = {
     width: 100%;
     height: 72%;
     position: relative;
+    @media ${`(max-width:1023px)`} {
+      height: unset;
+      aspect-ratio: 1;
+    }
   `,
   content: css`
     width: 100%;
@@ -58,12 +63,10 @@ const style = {
     flex-direction: column;
     justify-content: space-between;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
-    @media ${MediaQueries.xxl} {
-      padding: 16px 16px 10px 16px;
-    }
-
-    @media ${MediaQueries.xl} {
-      padding: 24px 24px 15px 24px;
+    @media ${`(max-width:1023px)`} {
+      height: unset;
+      aspect-ratio: 1/0.266;
+      padding: 16px 24px;
     }
   `,
 

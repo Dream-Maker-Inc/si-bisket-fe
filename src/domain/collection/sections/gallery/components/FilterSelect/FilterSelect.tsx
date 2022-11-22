@@ -12,6 +12,7 @@ import { useState } from 'react'
 import { Colors } from '@/common/themes/Color'
 
 export const FilterSelect = () => {
+  const models = ['높은 가격순', '낮은 가격순', '최신순', '오래된 순']
   const [value, setValue] = useState('높은 가격순')
 
   const handleChange = (event: SelectChangeEvent) => {
@@ -27,19 +28,22 @@ export const FilterSelect = () => {
           renderValue={selected => {
             return selected
           }}
+          MenuProps={{
+            anchorOrigin: {
+              vertical: 'top',
+              horizontal: 'left',
+            },
+            transformOrigin: {
+              vertical: 'top',
+              horizontal: 'center',
+            },
+          }}
         >
-          <MenuItem value={'높은 가격순'}>
-            <Item text='높은 가격순' checkedValue={value} />
-          </MenuItem>
-          <MenuItem value={'낮은 가격순'}>
-            <Item text='낮은 가격순' checkedValue={value} />
-          </MenuItem>
-          <MenuItem value={'최신순'}>
-            <Item text='최신순' checkedValue={value} />
-          </MenuItem>
-          <MenuItem value={'오래된 순'}>
-            <Item text='오래된 순' checkedValue={value} />
-          </MenuItem>
+          {models.map((it, index) => (
+            <MenuItem key={index} value={it} css={style.menuItem}>
+              <Item text={it} checkedValue={value} />
+            </MenuItem>
+          ))}
         </Select>
       </FormControl>
     </Box>
@@ -58,7 +62,7 @@ const Item = ({ text, checkedValue }: ItemProps) => {
       <div css={style.check}>
         {isMatched ? <CheckIcon fontSize='small' /> : null}
       </div>
-      <Typography fontWeight={600} variant='subtitle2'>
+      <Typography className='item-text' fontWeight={600} variant='subtitle2'>
         {text}
       </Typography>
     </div>
@@ -82,11 +86,28 @@ const style = {
     }
   `,
 
+  menuItem: css`
+    width: 166px;
+    border-radius: 16px;
+    &.Mui-selected {
+      background-color: white !important;
+    }
+    &:hover {
+      background-color: white !important;
+    }
+  `,
+
   item: css`
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    &:hover {
+      .item-text {
+        font-weight: bold;
+      }
+    }
   `,
   check: css`
     width: 12px;

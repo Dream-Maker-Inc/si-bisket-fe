@@ -10,14 +10,7 @@ export const GallerySection = () => {
         <FilterSelect />
       </div>
       <div css={style.container}>
-        <div css={style.row}>
-          <ImageCard />
-          <ImageCard />
-        </div>
-        <div css={style.row}>
-          <ImageCard />
-          <ImageCard />
-        </div>
+        <ImageCard /> <ImageCard /> <ImageCard /> <ImageCard />
       </div>
     </div>
   )
@@ -32,8 +25,16 @@ const style = {
     padding-top: 68px;
     padding-bottom: 200px;
 
+    @media ${MediaQueries.xxxl} {
+      max-width: 1062px;
+    }
+
+    @media ${`(max-width:1023px)`} {
+      max-width: 928px;
+    }
+
     @media ${MediaQueries.md} {
-      height: 2096px;
+      max-width: 500px;
       padding-top: 32px;
       padding-bottom: 160px;
     }
@@ -44,7 +45,7 @@ const style = {
     justify-content: end;
     margin-bottom: 16px;
 
-    @media ${MediaQueries.xl} {
+    @media ${MediaQueries.md} {
       margin-bottom: 12px;
     }
   `,
@@ -52,32 +53,20 @@ const style = {
   container: css`
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    gap: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 24px;
 
-    @media ${MediaQueries.xl} {
-      flex-direction: column;
-      height: fit-content;
-      gap: 28px;
+    @media ${MediaQueries.xxxl} {
+      grid-template-columns: 1fr 1fr 1fr;
+      row-gap: 24px;
     }
-  `,
-
-  row: css`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    gap: 24px;
-
-    @media ${MediaQueries.xl} {
-      align-items: center;
-      justify-content: center;
-      height: fit-content;
+    @media ${`(max-width:1023px)`} {
+      grid-template-columns: 1fr 1fr;
     }
 
     @media ${MediaQueries.md} {
-      flex-direction: column;
-      gap: 28px;
+      grid-template-columns: 1fr;
     }
   `,
 }
