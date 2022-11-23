@@ -6,10 +6,12 @@ import { ColumnSection } from '@/domain/main/sections/column'
 import { SubscribeSection } from '@/domain/main/sections/subscribe'
 import { Footer } from '@/common/components/footer'
 import { StartBanner } from '@/domain/main/sections/startBanner'
+import { CustomAppbar } from '@/common/components/Appbar'
 
 const Home: NextPage = () => (
   <>
     <main>
+      <CustomAppbar />
       <CollectionSection />
       <CuratedSection />
       <ColumnSection />
