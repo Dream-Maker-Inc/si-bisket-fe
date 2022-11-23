@@ -10,6 +10,7 @@ import { CustomAppbar } from '@/common/components/Appbar'
 
 const Home: NextPage = () => (
   <>
+    <CustomAppbar />
     <main>
       <CustomAppbar />
       <CollectionSection />

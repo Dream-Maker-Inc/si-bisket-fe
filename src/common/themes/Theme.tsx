@@ -34,6 +34,15 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           textTransform: 'none',
+
+          '&:hover': {
+            boxShadow: '0 3px 10px 0 rgba(0, 0, 0, 0.16)',
+          },
+
+          '&:disabled': {
+            backgroundColor: '#999999',
+            color: 'white',
+          },
         },
       },
     },
