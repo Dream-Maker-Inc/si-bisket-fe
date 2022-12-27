@@ -1,7 +1,6 @@
 import { css } from '@emotion/react'
 import { Stack, Typography } from '@mui/material'
 import { Colors } from '@/common/themes/Color'
-import { BackGround } from '../BackGround'
 import { MediaQueries } from '@/common/themes/Limit'
 
 const imageArr = [
@@ -52,6 +51,9 @@ const st = {
     margin-bottom: 0;
     transform: translate(0, 50%);
     @media ${MediaQueries.md} {
+      width: 100%;
+      max-width: 444px;
+      margin: 0 auto;
       display: flex;
       justify-content: center;
     }
@@ -73,7 +75,6 @@ const st = {
   image: css`
     width: 36px;
     height: 36px;
-
     background-size: contain;
     border-radius: 50%;
   `,

@@ -17,6 +17,7 @@ const style = {
     cursor: pointer;
     margin-bottom: 16px;
     border-radius: 5px;
+
     @media ${MediaQueries.md} {
       width: 100px;
       height: 100px;

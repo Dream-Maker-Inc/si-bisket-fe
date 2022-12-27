@@ -1,38 +1,31 @@
 import { css } from '@emotion/react'
 
-export const EditCollection = () => (
-  //   <div css={st.root}>
-  <div css={st.blur}> Edit Collection</div>
-  //   </div>
-)
+export const EditCollection = () => <div css={st.blur}> Edit Collection</div>
 
 const st = {
   root: css`
     color: white;
     width: 175px;
     height: 48px;
-
-    background-color: rgba(0, 0, 0, 0.1);
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-image: url('user-collection/whiteBox.png'); */
-    /* 
-    /* object-fit: contain; */
   `,
   blur: css`
-    display: flex;
-    align-items: center;
     width: fit-content;
     height: 48px;
+    display: flex;
+    align-items: center;
     cursor: pointer;
     padding: 15px 36px;
-    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(30px);
     border-radius: 10px;
     color: white;
+    font-weight: 600;
     transition: 0.5s;
     &:hover {
-      background-color: black;
+      background-color: rgba(0, 0, 0, 0.1);
     }
   `,
 }

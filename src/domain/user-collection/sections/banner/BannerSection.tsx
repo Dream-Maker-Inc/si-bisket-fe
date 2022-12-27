@@ -1,8 +1,10 @@
+import { AvatarChip } from '@/common/components/AvatarChip'
 import { ProfileChip } from '@/common/components/ProfileChip'
 import { MediaQueries } from '@/common/themes/Limit'
 import { css } from '@emotion/react'
 import { Typography } from '@mui/material'
 import { EditCollection } from './components/EditCollection'
+import { TitleThumbnail } from './components/Thumbnail'
 
 type BannersectionProps = {
   isCollector: boolean
@@ -11,6 +13,7 @@ type BannersectionProps = {
 export const BannerSection = ({ isCollector }: BannersectionProps) => {
   return (
     <div css={style.root}>
+      <TitleThumbnail />
       <Typography css={style.Title}>
         NFT is a new type of blockchain technology <br />
         that proves the ownership of digital art.
@@ -38,17 +41,16 @@ export const BannerSection = ({ isCollector }: BannersectionProps) => {
         Nft를 통해 위·변조가 쉬운 각종 무형자산 (디지털아트, 영상, 음악, 서류)
         이 원본임을 증명 할 수 있습니다.
       </Typography>
-      {isCollector ? (
-        <ProfileChip hoverEvent image='/main/profile.png' text='@Username' />
-      ) : (
-        <EditCollection />
-      )}
+      {isCollector ? <AvatarChip /> : <EditCollection />}
     </div>
   )
 }
 
 const style = {
   root: css`
+    width: 100%;
+    max-width: 1446px;
+
     @media ${MediaQueries.md} {
       display: flex;
       flex-direction: column;
@@ -112,8 +114,6 @@ const style = {
     }
     @media ${MediaQueries.md} {
       text-align: center;
-    }
-    @media ${MediaQueries.xs} {
       font-size: 16px;
       letter-spacing: -0.32px;
     }

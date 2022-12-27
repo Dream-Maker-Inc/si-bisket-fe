@@ -4,18 +4,20 @@ import { css } from '@emotion/react'
 import { BannerSection } from '@/domain/user-collection/sections/banner'
 import { BackGround } from '@/domain/user-collection/sections/banner/BackGround'
 import { CardItem } from '@/domain/user-collection/sections/banner/components/CardItem'
-import { TitleThumbnail } from '@/domain/user-collection/sections/banner/components/Thumbnail'
 import { NextPage } from 'next'
+import { GallerySection } from '@/domain/user-collection/sections/gallery'
+import { MoreSection } from '@/common/components/section/MoreSection'
 
 const UserCollection: NextPage = () => (
   <div>
     <CustomAppbar />
     <main>
       <BackGround>
-        <TitleThumbnail />
         <BannerSection isCollector={false} />
         <CardItem />
       </BackGround>
+      <GallerySection isUserCollector={true} />
+      <MoreSection />
     </main>
     <Footer />
   </div>

@@ -3,36 +3,39 @@ import { css } from '@emotion/react'
 import { MediaQueries } from '@/common/themes/Limit'
 import { FilterSelect } from './components/FilterSelect'
 
-export const GallerySection = () => {
+type GallerySectionProps = {
+  isUserCollector?: boolean
+}
+
+export const GallerySection = ({
+  isUserCollector = false,
+}: GallerySectionProps) => {
   return (
-    <div css={style.root}>
+    <div css={style.root(isUserCollector)}>
       <div css={style.select}>
         <FilterSelect />
       </div>
       <div css={style.container}>
-        <ImageCard /> <ImageCard /> <ImageCard /> <ImageCard />
+        <div css={style.inner}>
+          <ImageCard /> <ImageCard /> <ImageCard /> <ImageCard />
+        </div>
       </div>
     </div>
   )
 }
 
 const style = {
-  root: css`
+  root: (isUserCollector: boolean) => css`
     width: 100%;
     max-width: 1446px;
     margin: 0 auto;
     padding: 0 23px;
     padding-top: 68px;
     padding-bottom: 200px;
-    @media ${MediaQueries.xxxl} {
-      max-width: 1062px;
-    }
-    @media ${`(max-width:1023px)`} {
-      max-width: 928px;
-    }
+
     @media ${MediaQueries.md} {
       max-width: 500px;
-      padding-top: 32px;
+      padding-top: ${isUserCollector ? '105px' : '32px'};
       padding-bottom: 160px;
     }
   `,
@@ -49,15 +52,27 @@ const style = {
   container: css`
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `,
+
+  inner: css`
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 24px;
-    @media ${MediaQueries.xxxl} {
-      grid-template-columns: 1fr 1fr 1fr;
+    @media ${MediaQueries.xxl} {
+      width: fit-content;
+      grid-template-columns: repeat(3, 330px);
       row-gap: 24px;
     }
-    @media ${`(max-width:1023px)`} {
-      grid-template-columns: 1fr 1fr;
+    @media ${`(max-width:1100px)`} {
+      width: 100%;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media ${`(max-width:852px)`} {
+      grid-template-columns: repeat(2, 330px);
     }
 
     @media ${MediaQueries.md} {
