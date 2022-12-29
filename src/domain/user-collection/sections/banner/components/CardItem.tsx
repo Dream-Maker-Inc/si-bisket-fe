@@ -2,6 +2,7 @@ import { css } from '@emotion/react'
 import { Stack, Typography } from '@mui/material'
 import { Colors } from '@/common/themes/Color'
 import { MediaQueries } from '@/common/themes/Limit'
+import { useCustomMediaQuery } from '@/common/themes/UseCustomMediaQuery'
 
 const imageArr = [
   '/user-collection/profile2.png',
@@ -22,6 +23,7 @@ const renderImages = (imgArr: string[]) => {
 }
 
 export const CardItem = () => {
+  const { isSmall } = useCustomMediaQuery()
   return (
     <div css={st.root}>
       <div>
@@ -35,7 +37,9 @@ export const CardItem = () => {
       </div>
       <div css={st.floorPrice}>
         <Typography css={st.title}>Floor Price</Typography>
-        <Typography css={st.number}>$100</Typography>
+        <Typography css={st.number}>
+          {isSmall ? '$100' : '$ 100,000.00'}
+        </Typography>
       </div>
     </div>
   )

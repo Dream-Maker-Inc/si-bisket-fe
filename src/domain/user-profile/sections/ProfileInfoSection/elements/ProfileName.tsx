@@ -1,3 +1,4 @@
+import { MediaQueries } from '@/common/themes/Limit'
 import { css } from '@emotion/react'
 import { Typography } from '@mui/material'
 
@@ -26,12 +27,20 @@ const style = {
   name: css`
     width: fit-content;
     position: relative;
+    @media ${MediaQueries.xs} {
+      height: 34px;
+      display: flex;
+      align-items: flex-end;
+    }
   `,
   nameText: css`
     font-size: 36px;
     font-weight: bold;
     letter-spacing: -0.72px;
     line-height: 1;
+    @media ${MediaQueries.xs} {
+      font-size: 28px;
+    }
   `,
   mark: css`
     position: absolute;

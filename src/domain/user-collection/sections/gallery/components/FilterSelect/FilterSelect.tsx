@@ -87,7 +87,7 @@ const style = {
   `,
 
   menuItem: css`
-    width: 166px;
+    width: 184px;
     border-radius: 16px;
     &.Mui-selected {
       background-color: white !important;

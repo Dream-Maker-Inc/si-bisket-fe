@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 
-export const useUserProfileView = () => {
+export const useUserCollectionView = () => {
   const router = useRouter()
   const user = router.query?.user + ''
 

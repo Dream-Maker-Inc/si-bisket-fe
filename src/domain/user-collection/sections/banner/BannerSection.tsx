@@ -1,8 +1,7 @@
-import { AvatarChip } from '@/common/components/AvatarChip'
-import { ProfileChip } from '@/common/components/ProfileChip'
 import { MediaQueries } from '@/common/themes/Limit'
 import { css } from '@emotion/react'
 import { Typography } from '@mui/material'
+import { AvatarChip } from './components/AvatarChip'
 import { EditCollection } from './components/EditCollection'
 import { TitleThumbnail } from './components/Thumbnail'
 
@@ -11,35 +10,25 @@ type BannersectionProps = {
 }
 
 export const BannerSection = ({ isCollector }: BannersectionProps) => {
+  const models = {
+    title: 'The Name of Collections',
+    responsiveTitle: 'The Name of Collections',
+    subtitle:
+      ' Nft (Non-Fungible Token) 는 신개념 블록체인 기술을 활용하여 발행하는 대체 불가능 토큰입니다.\nNft를 통해 위·변조가 쉬운 각종 무형자산 (디지털아트, 영상, 음악, 서류)이 원본임을 증명 할 수 있습니다. Nft (Non-Fungible Token)\n는 신개념 블록체인 기술을 활용하여 발행하는 대체 불가능 토큰입니다.\nNft를 통해 위·변조가 쉬운 각종 무형자산 (디지털아트, 영상, 음악, 서류)이 원본임을 증명 할 수 있습니다.',
+    responsiveSubTitle:
+      'Nft (Non-Fungible Token) 는 신개념 블록체인 기술을 활용하여 발행하는 대체 불가능 토큰입니다.\nNFT를 통해 위·변조가 쉬운 각종 무형자산 (디지털아트, 영상, 음악, 서류)이 원본임을 증명 할 수 있습니다. Nft (Non- Fungible Token)는 신개념블록체인 기술을 활용하여 발행하는 대체 불가능 토큰입니다.\nNft를 통해 위·변조가 쉬운 각종 무형자산 (디지털아트, 영상, 음악, 서류)이 원본임을 증명 할 수 있습니다.',
+  }
+
   return (
     <div css={style.root}>
       <TitleThumbnail />
-      <Typography css={style.Title}>
-        NFT is a new type of blockchain technology <br />
-        that proves the ownership of digital art.
-      </Typography>
+      <Typography css={style.Title}>{models.title}</Typography>
       <Typography css={style.responsiveTitle}>
-        The Name of Collections
+        {models.responsiveTitle}
       </Typography>
-      <Typography css={style.subTitle}>
-        Nft (Non-Fungible Token) 는 신개념 블록체인 기술을 활용하여 발행하는
-        대체 불가능 토큰입니다. <br />
-        Nft를 통해 위·변조가 쉬운 각종 무형자산 (디지털아트, 영상, 음악, 서류)
-        이 원본임을 증명 할 수 있습니다. Nft (Non-Fungible Token) <br />는
-        신개념 블록체인 기술을 활용하여 발행하는 대체 불가능 토큰입니다. <br />
-        Nft를 통해 위·변조가 쉬운 각종 무형자산 (디지털아트, 영상, 음악, 서류)
-        이 원본임을 증명 할 수 있습니다.
-      </Typography>
+      <Typography css={style.subTitle}>{models.subtitle}</Typography>
       <Typography css={style.responsiveSubTitle}>
-        Nft (Non-Fungible Token) 는 신개념 블록체인 기술을 활용하여 발행하는
-        대체 불가능 토큰입니다. <br />
-        NFT를 통해 위·변조가 쉬운 각종 무형자산 (디지털아트, 영상, 음악, 서류)
-        이 원본임을 증명 할 수 있습니다. Nft (Non-
-        {/* <br /> */}
-        Fungible Token) 는 신개념 블록체인 기술을 활용하여 발행하는 대체 불가능
-        토큰입니다. <br />
-        Nft를 통해 위·변조가 쉬운 각종 무형자산 (디지털아트, 영상, 음악, 서류)
-        이 원본임을 증명 할 수 있습니다.
+        {models.responsiveSubTitle}
       </Typography>
       {isCollector ? <AvatarChip /> : <EditCollection />}
     </div>
@@ -62,7 +51,7 @@ const style = {
     height: 112px;
   `,
   Title: css`
-    font-size: 52px;
+    font-size: 76px;
     font-weight: bold;
     color: white;
     line-height: 1;
@@ -90,11 +79,13 @@ const style = {
     }
   `,
   subTitle: css`
+    width: 920px;
     font-size: 18px;
     line-height: 1.56;
     letter-spacing: -0.36px;
     color: white;
     margin: 20px 0 28px 0;
+    word-break: break-all;
     @media ${MediaQueries.xl} {
       display: none;
     }
@@ -109,6 +100,7 @@ const style = {
     color: white;
     margin: 20px 0 28px 0;
     display: none;
+    word-break: break-all;
     @media ${MediaQueries.xl} {
       display: block;
     }

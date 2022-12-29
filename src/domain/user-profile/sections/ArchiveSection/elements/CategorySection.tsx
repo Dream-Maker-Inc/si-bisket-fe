@@ -35,6 +35,7 @@ const style = {
     display: flex;
     align-items: center;
     gap: 48px;
+    border-bottom: 1px solid #e6e6e6;
     ::-webkit-scrollbar {
       display: none;
     }
