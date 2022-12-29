@@ -1,0 +1,1 @@
+export { ProfileBannerChip } from './ProfileBannerChip'

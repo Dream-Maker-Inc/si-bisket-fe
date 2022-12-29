@@ -1,6 +1,5 @@
 import { Stack, Typography } from '@mui/material'
 import { css } from '@emotion/react'
-import { MediaQueries } from '@/common/themes/Limit'
 
 type CardProfileProps = {
   avatar: string

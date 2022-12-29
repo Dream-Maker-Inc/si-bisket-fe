@@ -59,6 +59,7 @@ const style = {
     height: 28%;
     background-color: white;
     padding: 24px 24px 15px 24px;
+    text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

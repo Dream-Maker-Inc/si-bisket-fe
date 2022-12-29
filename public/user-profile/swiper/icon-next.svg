@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108">
+    <defs>
+        <filter id="xlcjgvakja" x="0" y="0" width="108" height="108" filterUnits="userSpaceOnUse">
+            <feOffset dy="2"/>
+            <feGaussianBlur stdDeviation="10" result="blur"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="구성 요소 222 – 1">
+        <g data-name="그룹 40697">
+            <g style="filter:url(#xlcjgvakja)">
+                <g data-name="패스 15732" style="fill:#fff;opacity:.7">
+                    <path d="M24 47.5a23.422 23.422 0 0 1-16.617-6.883A23.422 23.422 0 0 1 .5 24 23.422 23.422 0 0 1 7.383 7.383 23.422 23.422 0 0 1 24 .5a23.422 23.422 0 0 1 16.617 6.883A23.422 23.422 0 0 1 47.5 24a23.422 23.422 0 0 1-6.883 16.617A23.422 23.422 0 0 1 24 47.5z" style="stroke:none" transform="rotate(-90 53 23)"/>
+                    <path d="M24 1A22.925 22.925 0 0 0 7.737 7.737 22.925 22.925 0 0 0 1 24a22.925 22.925 0 0 0 6.737 16.263A22.925 22.925 0 0 0 24 47a22.925 22.925 0 0 0 16.263-6.737A22.925 22.925 0 0 0 47 24a22.925 22.925 0 0 0-6.737-16.263A22.925 22.925 0 0 0 24 1m0-1c13.255 0 24 10.745 24 24S37.255 48 24 48 0 37.255 0 24 10.745 0 24 0z" style="fill:#e6e6e6;stroke:none" transform="rotate(-90 53 23)"/>
+                </g>
+            </g>
+            <path data-name="패스 15721" d="M48.349 62.344a1.86 1.86 0 0 0 2.706 0l9.458-9.931a2.069 2.069 0 0 0 .058-2.76l-9.319-9.786a1.855 1.855 0 0 0-2.706-.01 2.068 2.068 0 0 0 0 2.833l7.912 8.405-8.119 8.416a2.068 2.068 0 0 0 .01 2.833z"/>
+        </g>
+    </g>
+</svg>
