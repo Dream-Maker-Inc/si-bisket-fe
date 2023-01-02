@@ -14,5 +14,11 @@ const style = {
     font-size: 16px;
     font-weight: 600;
     letter-spacing: -0.32px;
+
+    &:hover {
+      background-color: black;
+      border: solid 1px black;
+      color: white;
+    }
   `,
 }

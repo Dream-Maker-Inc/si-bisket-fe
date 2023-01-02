@@ -3,13 +3,6 @@ import { css } from '@emotion/react'
 export const EditCollection = () => <div css={st.blur}> Edit Collection</div>
 
 const st = {
-  root: css`
-    color: white;
-    width: 175px;
-    height: 48px;
-    background-repeat: no-repeat;
-    background-size: cover;
-  `,
   blur: css`
     width: fit-content;
     height: 48px;
@@ -25,7 +18,7 @@ const st = {
     font-weight: 600;
     transition: 0.5s;
     &:hover {
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: black;
     }
   `,
 }
