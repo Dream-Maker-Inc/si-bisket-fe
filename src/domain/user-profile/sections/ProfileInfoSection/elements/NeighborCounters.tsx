@@ -24,6 +24,10 @@ const style = {
     align-items: center;
     gap: 24px;
     margin-top: 16px;
+
+    @media ${`(max-width:854px)`} {
+      margin-top: 17px;
+    }
   `,
   bold: css`
     font-size: 18px;

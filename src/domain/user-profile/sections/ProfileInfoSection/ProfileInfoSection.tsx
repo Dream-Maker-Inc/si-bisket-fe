@@ -56,7 +56,9 @@ const style = {
     padding: 0 23px;
     padding-top: 82px;
     padding-bottom: 100px;
-
+    @media ${`(max-width:854px)`} {
+      padding-top: 50px;
+    }
     @media ${MediaQueries.xs} {
       padding-top: 54px;
       padding-bottom: 80px;
@@ -74,7 +76,7 @@ const style = {
     align-items: center;
     gap: 40px;
 
-    @media ${MediaQueries.x} {
+    @media ${`(max-width:854px)`} {
       width: unset;
       align-items: unset;
       flex-direction: column;
@@ -87,7 +89,7 @@ const style = {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @media ${MediaQueries.x} {
+    @media ${`(max-width:854px)`} {
       flex: unset;
       height: unset;
       justify-content: unset;

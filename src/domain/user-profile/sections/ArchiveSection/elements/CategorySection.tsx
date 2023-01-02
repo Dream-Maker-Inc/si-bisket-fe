@@ -1,3 +1,4 @@
+import { MediaQueries } from '@/common/themes/Limit'
 import { css } from '@emotion/react'
 import { Typography } from '@mui/material'
 import { useState } from 'react'
@@ -41,9 +42,13 @@ const style = {
     }
   `,
   item: (isClicked: boolean) => css`
-    height: 32px;
+    padding-bottom: 20px;
     border-bottom: ${isClicked ? '1px solid black' : '1px solid transparent'};
     cursor: pointer;
+
+    @media ${MediaQueries.xs} {
+      padding-bottom: 10px;
+    }
   `,
 
   text: (isClicked: boolean) => css`

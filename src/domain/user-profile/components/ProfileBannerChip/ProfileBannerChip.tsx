@@ -22,9 +22,14 @@ const style = {
     left: 0;
     z-index: 1;
 
-    @media ${MediaQueries.xs} {
+    @media ${`(max-width:854px)`} {
+      bottom: -30px;
       width: 100px;
       padding: 10px;
+    }
+
+    @media ${MediaQueries.xs} {
+      bottom: -34px;
     }
   `,
   image: css`
