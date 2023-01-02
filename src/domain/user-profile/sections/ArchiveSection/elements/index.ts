@@ -1,5 +1,5 @@
 export { CategorySection } from './CategorySection'
 export { ArchiveContent } from './ArchiveContent'
-export { TitleThumbnail } from './SlideTitleThumbnail'
+export { SlideTitleThumbnail } from './SlideTitleThumbnail'
 import { CreateButton } from './buttons/CreateButton'
 import { EditProfileButton } from './buttons/EditProfileButton'
