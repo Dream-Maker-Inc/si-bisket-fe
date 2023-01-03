@@ -177,6 +177,11 @@ const Collections = () => {
       profileImg: '/user-collection/thumbnailSquare.png',
       profileName: 'Collection Name',
     },
+    {
+      slideImg: '/user-profile/swiper/img-card-sample.jpg',
+      profileImg: '/user-collection/thumbnailSquare.png',
+      profileName: 'Collection Name',
+    },
   ]
 
   return (
